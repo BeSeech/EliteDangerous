@@ -1,0 +1,11 @@
+[DEFAULT]
+BASEURL=http://www.iconico.com/index.aspx
+[InternetShortcut]
+URL=http://www.iconico.com/link.asp?app=Magnifier&ver=2&minorver=4&action=StartMenu
+Modified=10B0039AB7D6C601B1
+IconIndex=0
+IconFile=C:\Laptop-D\Projects\WebTools\deploy\Iconico.ico
+HotKey=0
+IDList=
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
