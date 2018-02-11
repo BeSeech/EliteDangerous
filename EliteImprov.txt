@@ -1,0 +1,8 @@
+After recently discovering that I could change the color of my HUD from a thread I read about here on the forums I decided to see if there was any way to change the in game Fov.
+The setting files is found at: C:\Users\(Username)\AppData\Local\Frontier Developments\Elite Dangerous\Options\Graphics\Settings.xml
+
+It seems that the default ingame slider maxes out at 60. I play at 1920x1080@60hz on a 24" monitor +TrackIR and setting it to 80 suits me best.
+Changing it really helped get rid of the super cramped feeling from inside the cockpit, It feels much more open and enjoyable now.
+
+
+C:\Users\(Username)\AppData\Local\Frontier Developments\Elite Dangerous\Options\Graphics\Settings.xml

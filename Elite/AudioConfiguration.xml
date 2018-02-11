@@ -1,0 +1,38 @@
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<AudioConfig>
+	<Latency>
+		<RefillBuffers>4</RefillBuffers>
+		<SamplesPerFrame>1024</SamplesPerFrame>
+	</Latency>
+	<AudioAPI>0</AudioAPI>
+</AudioConfig> -->
+<!-- 
+		This file gives you the option to overwrite Elite's internal settings for the audio engine Wwise on Windows systems. 
+		Please note that the game will sanity check all supplied values and fall back to defaults in the case of invalid data.
+		
+		1. Latency:
+			The numbers RefillBuffers and SamplesPerFrame under "Latency" define the internal latency and thus the frame rate of the audio engine. 
+			A rule of thumb here is that lower values mean LESS latency and therefore a FASTER frame rate.
+			Lowering the numbers here might be desirable e.g. when you want to get audio frame rate closer to the target frame rate of VR headsets (90fps, ~11ms).
+			However be aware that this will also increase the CPU impact and you might experience audio dropouts if the numbers are too low. 
+			
+			RefillBuffers: 		default is 4, valid numbers are 1 to 8.
+			SamplesPerFrame:	default is 1024, valid entries are 256, 512, 1024 and 2048
+			
+			For more info check: https://www.audiokinetic.com/library/2015.1.5_5533/?source=SDK&id=soundengine__events.html (Latency Between Posting an Event and Actual Sound Playback)		
+			
+			Feel free to experiment with those numbers and maybe let us know via the forums how they work out for you.
+			
+		2. AudioAPI:
+			This setting allows you to overwrite the used Audio API on Windows systems. These are defaults:
+			- If you start the game within a VR environment (Oculus Store or the Steam VR build) it will use WASAPI.
+			- If you start the game within Steam (non VR) or via Elite launcher either WASAPI or XAudio2 may be chosen (it is Wwise's choice and depends on the used operating system).
+			
+			Changing this might be useful if you experience Elite taking exclusive ownership about Windows' audio environment or silent Oculus Rift headphones.
+			The values mean:
+			0 - no change, the default AudioAPI will be used (see above)
+			1 - force WASAPI
+			2 - force XAudio2
+			
+		In order to try out, simply uncomment the XML code at the top of the file.
+-->

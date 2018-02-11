@@ -1,0 +1,767 @@
+include "target.tmh"
+
+int DoNextJump;
+int Jump;
+int firstShieldCellBankToogleChain;
+int secondShieldCellBankToogleChain;
+int thirdShieldCellBankToogleChain;
+int InitLights;
+int priorState;
+int isInit;
+int priorCellBankNumberGlobal;
+int cellBankNumberGlobal;
+int relogCount;
+int energyToShield;
+int energyToEngine;
+int energyToWeapon;
+int energyMode;
+int toShield;
+int toEngine;
+int toWeapon;
+int restoreEnergyTo;
+
+//program startup
+int main()
+{
+    Beep();
+    if(Init(&EventHandle)) return 1; // declare the event handler, return on error
+    
+    isInit = 0;
+    relogCount = 0;
+    MyInit();
+    DoAxis();
+    ApplyState();
+	ApplyInitButton();
+	ApplyJumpWithScan();
+    ApplyCH();
+	ApplySPD();
+	ApplyRest();
+	ApplyH2();
+	//ApplyFireButtons();
+	ApplyJCurves();
+	ApplyDX();
+	AplyLogout();
+	ApplyOther();
+	Ready();
+	ApplyEnergyAllocation();
+}
+
+//event handler
+int EventHandle(int type, alias o, int x)
+{
+    DefaultMapping(&o, x);
+	
+	//add event handling code here
+}
+
+int SetEnergyTo(int target)
+{
+    if (target == toShield) 
+    {
+        ActKey(PULSE + KEYON + energyToShield);
+    }
+    if (target == toEngine) 
+    {
+        ActKey(PULSE + KEYON + energyToEngine);
+    }
+    if (target == toWeapon) 
+    {
+        ActKey(PULSE + KEYON + energyToWeapon);
+    }
+}
+
+
+int ApplyEnergyAllocation()
+{
+    energyMode = 0;
+    toShield = 0;
+    toEngine = 1;
+    toWeapon = 2;
+
+    energyToShield = 
+        CHAIN( LOCK + 
+        PULSE + DARROW, D(),
+        PULSE + UARROW, D(), 
+        PULSE + LARROW, D(), 
+        PULSE + UARROW, D(), 
+        PULSE + LARROW, D(), 
+        PULSE + LARROW, D(), 
+        PULSE + LARROW, D(),      
+        EXEC("energyMode=toShield;"), D(),
+        LOCK );    
+    
+    energyToEngine =
+        CHAIN( LOCK + 
+        PULSE + DARROW, D(),
+        PULSE + UARROW, D(), 
+        PULSE + RARROW, D(), 
+        PULSE + UARROW, D(), 
+        EXEC("energyMode=toEngine;"), D(),
+        LOCK );
+    
+    energyToWeapon =
+        CHAIN( LOCK + 
+        PULSE + DARROW, D(), 
+        PULSE + RARROW, D(), 
+        PULSE + UARROW, D(), 
+        PULSE + RARROW, D(), 
+        EXEC("energyMode=toWeapon;"), D(),
+        LOCK );
+        
+        
+    MapKey(&Throttle, BSF, EXEC("SetEnergyTo(toWeapon);"));
+    MapKey(&Throttle, BSM, EXEC("SetEnergyTo(toEngine);"));
+    MapKey(&Throttle, BSB, EXEC("SetEnergyTo(toShield);"));
+}
+
+int MyInit()
+{
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255));
+}
+
+
+int ProcessState(int State)
+{
+
+  ActKey(PULSE+KEYON+InitLights);
+
+  if (State == 0)
+  {
+    printf("State == 0; \xa");
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED1)); 
+    SetShieldsCellBank(priorState, 0);
+    //DoSome();
+  }
+
+  if (State == 1)
+  {
+    printf("State == 1; \xa");
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED2)); 
+    SetShieldsCellBank(priorState, 1);
+    //DoSome();
+  }
+  if (State == 2)
+  {
+    printf("State == 2; \xa");
+    ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED3)); 
+    SetShieldsCellBank(priorState, 2);
+    //DoSome();
+  }
+
+  priorState = State;
+}
+
+int ApplyState()
+{
+    priorState = 0;
+  
+    InitLights = CHAIN( 
+        LED(&Throttle, LED_ONOFF, LED_CURRENT - LED1),
+        LED(&Throttle, LED_ONOFF, LED_CURRENT - LED2), 
+        LED(&Throttle, LED_ONOFF, LED_CURRENT - LED3), 
+        LED(&Throttle, LED_ONOFF, LED_CURRENT - LED4), 
+        LED(&Throttle, LED_ONOFF, LED_CURRENT - LED5)
+    );    
+
+    MapKey(&Throttle,  PSF, EXEC("ProcessState(0);"));     
+    MapKey(&Throttle,  PSM, EXEC("ProcessState(1);"));     
+    MapKey(&Throttle,  PSB, EXEC("ProcessState(2);"));     
+}
+
+int ApplyOther()
+{
+ MapKey(&Throttle,  
+            EOLIGN,
+            PULSE+'f'
+    );
+    
+ MapKey(&Throttle,  
+            EFLNORM,
+            LED(&Throttle, LED_INTENSITY, 70)
+    );
+
+ MapKey(&Throttle,  
+            EFLOVER,
+            LED(&Throttle, LED_INTENSITY, 0)
+    );
+
+    
+}
+
+int ApplyJumpWithScan()
+{
+    DoNextJump = 0;
+
+    MapKey(&Throttle, APUON, EXEC("DoNextJump=1;")); 
+    MapKey(&Throttle, APUOFF, EXEC("DoNextJump=0;")); 
+    
+    
+    int delTime = 250;
+    int delForJump = 36000;
+    int delForScan = 12000;
+    int delForScoope = 12000;
+    
+    Jump = CHAIN( 
+            PULSE + 'Q', 
+            D(delForJump),
+            DOWN + 'A',
+            D(delForScan),
+            UP + 'A',
+            D(delForScoope),
+            EXEC("if(DoNextJump == 1) ActKey(PULSE+KEYON+Jump);")
+        );    
+    
+    MapKey(&Throttle,  
+            EORIGN,
+            EXEC("ActKey(PULSE+KEYON+Jump);")
+    );
+}
+
+int ApplyInitButton()
+{
+    int delTime = 250;
+    MapKey(&Throttle, LTB, 
+    CHAIN(
+         PULSE + 'p', D(delTime), //1
+            PULSE + '-', D(delTime), //2
+            LOCK
+        ));
+
+    	ApplyChangeShieldsCellBank();
+        MapKey(&Throttle, EACON, PULSE+'k');
+        MapKeyR(&Throttle, EACON, PULSE+'k');
+    	
+}
+
+int MoveMouseCursorToCenter()
+{
+    DXAxis(MOUSE_X_AXIS, 0000);
+    DXAxis(MOUSE_Y_AXIS, 1000);
+    ClickMouse();
+}
+
+int ClickMouse()
+{
+    ActKey(KEYON + PULSE + MOUSE_LEFT);
+}
+
+int ApplyDX()
+{
+  MapKey(&Throttle, RDRNRM, PULSE+'j');
+  MapKeyR(&Throttle, RDRNRM, PULSE+'j');
+
+  MapKeyR(&Throttle, APPAT, UP + 'g');
+  MapKey(&Throttle, APPAT, DOWN + 'g');
+
+  MapKeyR(&Throttle, APALT, PULSE+ ESC);
+  MapKey(&Throttle, APALT, PULSE+ ESC);
+
+  MapKey(&Throttle, APDIS, CHAIN(PULSE+'h', D(), EXEC("MoveMouseCursorToCenter();")));
+  
+  MapKey(&Throttle, APALT, EXEC("printf(\"\\xa RelogCount = \"); printValue(relogCount); printf(\"\\xa\");"));
+}
+
+int Beep()
+{
+  printf("Beep! \\xa");  
+  system("spawn -w \"\" \"rundll32.exe cmdtext.dll, MessageBeepStub\" ");
+}
+
+int AplyLogout()
+{
+    int delTime = 400;  
+     
+    MapKey(&Throttle,  
+    FLAPU,
+         CHAIN(LOCK + EXEC("relogCount = relogCount + 1;"),
+            PULSE + ESC, D(delTime * 10), //1
+            PULSE + DARROW, D(delTime), //2
+            PULSE + DARROW, D(delTime), //3
+            PULSE + DARROW, D(delTime), //4
+            PULSE + DARROW, D(delTime), //5
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 10), //7
+            PULSE + RARROW, D(delTime), //8
+            PULSE + ENT, D(delTime * 20), //9
+            // Login          
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + ENT, D(delTime * 30), //9
+            // Missions
+            PULSE + 'd', D(delTime * 20), //9
+            PULSE + DARROW, D(delTime), //6
+            PULSE + 'd', D(delTime * 10), //9
+            PULSE + LARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            
+            LOCK
+    ));
+    MapKey(&Throttle,  FLAPM,
+         CHAIN(LOCK + EXEC("relogCount = relogCount + 1;"),
+            PULSE + ESC, D(delTime * 10), //1
+            PULSE + DARROW, D(delTime), //2
+            PULSE + DARROW, D(delTime), //3
+            PULSE + DARROW, D(delTime), //4
+            PULSE + DARROW, D(delTime), //5
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 10), //7
+            PULSE + RARROW, D(delTime), //8
+            PULSE + ENT, D(delTime * 20), //9
+            // Login          
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + DARROW, D(delTime * 2), //6
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + ENT, D(delTime * 30), //9
+            // Missions
+            PULSE + 'd', D(delTime * 20), //9
+            PULSE + DARROW, D(delTime), //6
+            PULSE + 'd', D(delTime * 10), //9
+            PULSE + LARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+          
+            LOCK
+    ));
+    MapKey(&Throttle,  FLAPD,
+         CHAIN(LOCK + EXEC("relogCount = relogCount + 1;"),
+            PULSE + ESC, D(delTime * 10), //1
+            PULSE + DARROW, D(delTime), //2
+            PULSE + DARROW, D(delTime), //3
+            PULSE + DARROW, D(delTime), //4
+            PULSE + DARROW, D(delTime), //5
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 10), //7
+            PULSE + RARROW, D(delTime), //8
+            PULSE + ENT, D(delTime * 20), //9
+            // Login          
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + DARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 30), //9
+            // Missions
+            PULSE + 'd', D(delTime * 20), //9
+            PULSE + DARROW, D(delTime), //6
+            PULSE + 'd', D(delTime * 10), //9
+            PULSE + LARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + UARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+
+            LOCK
+    ));
+}
+
+int ToogleShieldsCellBank(int cellBankNumber)
+{
+    int delTime;
+    delTime = 100;
+   
+  if (cellBankNumber == 0)
+  {
+     printf("cellBankNumber == 0; \xa");
+  }
+  if (cellBankNumber == 1)
+  {
+     printf("cellBankNumber == 1; \xa");
+  }
+  if (cellBankNumber == 2)
+  {
+     printf("cellBankNumber == 2; \xa");
+  }
+
+    int firstShieldCellBankToogleChain = CHAIN( 
+            LOCK,
+            
+            //go to modules
+            PULSE+DX23, 
+            D(delTime),
+            PULSE+DX12,
+            D(delTime),
+          
+            //go down 
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            
+            //toogle
+            PULSE+DX1,
+            D(delTime),  
+            PULSE+DX1,
+            D(delTime),  
+            
+            //go up 
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+
+            //exit from modules
+            PULSE+DX14,
+            D(delTime),  
+            PULSE+DX2,
+            
+            LOCK
+        );
+        
+int secondShieldCellBankToogleChain = CHAIN( 
+            LOCK,
+            
+            //go to modules
+            PULSE+DX23, 
+            D(delTime),
+            PULSE+DX12,
+            D(delTime),
+          
+            //go down 
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            
+            //toogle
+            PULSE+DX1,
+            D(delTime),  
+            PULSE+DX1,
+            D(delTime),  
+            
+            //go up 
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+
+            //exit from modules
+            PULSE+DX14,
+            D(delTime),  
+            PULSE+DX2,
+            
+            LOCK
+        );
+
+int thirdShieldCellBankToogleChain = CHAIN( 
+            LOCK,
+            
+            //go to modules
+            PULSE+DX23, 
+            D(delTime),
+            PULSE+DX12,
+            D(delTime),
+          
+            //go down 
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            PULSE+DARROW,
+            D(delTime),  
+            
+            //toogle
+            PULSE+DX1,
+            D(delTime),  
+            PULSE+DX1,
+            D(delTime),  
+            
+            //go up 
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+            PULSE+UARROW,
+            D(delTime),  
+
+            //exit from modules
+            PULSE+DX14,
+            D(delTime),  
+            PULSE+DX2,
+            
+            LOCK
+        );
+
+    printf("ToogleShieldsCellBank; \xa");
+    if (cellBankNumber == 0) 
+    {
+        ActKey(PULSE+KEYON+firstShieldCellBankToogleChain);
+    }
+    if (cellBankNumber == 1) 
+    {
+        ActKey(PULSE+KEYON+secondShieldCellBankToogleChain);
+    }
+    if (cellBankNumber == 2) 
+    {
+        ActKey(PULSE+KEYON+thirdShieldCellBankToogleChain);
+    }
+}
+
+int SetShieldsCellBank(int priorCellBankNumber, int cellBankNumber)
+{
+    priorCellBankNumberGlobal = priorCellBankNumber;
+    cellBankNumberGlobal = cellBankNumber;
+
+    int setShieldsCellBank = CHAIN(    
+        //Set off
+        EXEC("ToogleShieldsCellBank(priorCellBankNumberGlobal); "),
+        D(200),
+        //Set on
+        EXEC("ToogleShieldsCellBank(cellBankNumberGlobal); ")
+        );
+   ActKey(PULSE+KEYON+setShieldsCellBank);
+}
+
+int ApplyChangeShieldsCellBank()
+{
+    MapKey(&Throttle,  EFRNORM, DOWN + DX1); 
+    MapKeyR(&Throttle,  EFRNORM, UP + DX1); 
+}
+
+int ApplyJCurves()
+{
+//SetCustomCurve(&Throttle, THR_RIGHT, LIST(0,0, 34,50, 36,50, 62,100)); 
+SetCustomCurve(&Throttle, THR_RIGHT, LIST(0,0, 32,50, 38,50, 62,100)); 
+}
+
+int ApplyH2()
+{
+    MapKey(&Joystick, H2R, CHAIN(PULSE+ 'n', D(),PULSE+ 'n', D(),PULSE+ 'n', D(),PULSE+ 'n', D(),PULSE+ 'n', D(),PULSE+ 'n', D(),PULSE+ 'n', D()));
+}
+
+int StartTargetSearch()
+{
+  restoreEnergyTo = energyMode;
+  if (energyMode != toEngine)
+  {
+    SetEnergyTo(toEngine);
+  }
+  ActKey(DOWN + KEYON + 'z');
+}
+
+int StopTargetSearch()
+{
+  if (energyMode == toEngine)
+  {
+    if (energyMode != restoreEnergyTo)
+    {
+        SetEnergyTo(restoreEnergyTo);
+    }
+  }
+  ActKey(UP + KEYON + 'z');
+}
+
+
+int	ApplySPD()
+{
+  MapKey(&Throttle, SPDF, EXEC("StartTargetSearch();"));
+  MapKeyR(&Throttle, SPDF, EXEC("StopTargetSearch();"));
+  MapKey(&Throttle, SPDB, DOWN+'z');
+  MapKeyR(&Throttle, SPDB, UP + 'z');
+}
+
+
+int ApplyFireButtons()
+{
+    MapKey(&Joystick, TG1, 'q');
+    MapKey(&Joystick, TG2, 'a');
+}
+
+int DoAxis()
+{
+    MapAxis(&Joystick, JOYX, DX_X_AXIS); 
+    MapAxis(&Joystick, JOYY, DX_Y_AXIS); 
+    MapAxis(&Throttle, THR_LEFT, DX_ZROT_AXIS); 
+    MapAxis(&Throttle, THR_RIGHT, DX_Z_AXIS); 
+    MapAxis(&Throttle, SCX, DX_XROT_AXIS); 
+    MapAxis(&Throttle, SCY, DX_YROT_AXIS);     
+    //MapAxis(&Throttle, THR_FC, DX_SLIDER_AXIS); 
+    MapAxis(&Throttle, THR_FC, DX_Y_AXIS); 
+    
+    //deaz zone as 4th parameter. (&Joystick, JOYY, 0, here, ...)
+    SetSCurve(&Joystick, JOYY, 0, 2, 0, 0, 0);
+    SetSCurve(&Joystick, JOYX, 0, 0, 0, 0, 0);
+}
+
+int ApplyCH()
+{
+  MapKey(&Throttle, CHF, PULSE+'x');
+  MapKey(&Throttle, CHB, PULSE+'c');
+}
+
+int ApplyRest()
+{
+  MapKey(&Throttle, LDGH, 
+    CHAIN(
+    PULSE+'0',D(100),
+    PULSE+'0',D(100),
+    PULSE+'0',D(100),
+    PULSE+'0',D(100),
+    PULSE+'0',D(100),
+    PULSE+'9'));
+  MapKey(&Throttle, APDIS, PULSE+USB[0x12]);
+}
+
+int Ready()
+{
+    int setInit = CHAIN( LOCK,
+            EXEC("setInit = 1;"),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 0),
+            D(500),
+            PULSE+KEYON+LED(&Throttle, LED_INTENSITY, 255),
+            LOCK
+        );  
+}
+
+int printValue(int value)
+{
+  int remainder = 0;
+  int result = 0;
+  int size = 0;
+  int divider = 0;
+  int i = 0;
+  
+  //GetSize
+  divider = 1;
+  size = 1;
+  result = value / divider;
+  while (result > 9)
+  {
+    size = size + 1;
+    divider = 1;
+    i = 1;
+    while (i < size)
+    {
+        i = i + 1;
+        divider = divider * 10;
+    }
+    result = value / divider;
+  }
+
+
+//  printf("Size: ");
+//  printDigit(size);
+//  printf("\xa");
+
+   
+//  printf("Value: ");
+  //Print all digits
+  int curValue = value;
+  while (size > 0)
+  {
+    divider = 1;
+    i = 1;
+    while (i < size)
+    {
+        i = i + 1;
+        divider = divider * 10;
+    }
+    result = curValue / divider;
+    curValue = curValue - (result * divider);
+    size = size - 1;
+    printDigit(result);
+  }
+//  printf("\xa");
+}
+
+int printDigit(int digit)
+{
+  if (digit == 0)
+  {
+       printf("0");
+  }
+  if (digit == 1)
+  {
+       printf("1");
+  }
+  if (digit == 2)
+  {
+       printf("2");
+  }
+  if (digit == 3)
+  {
+       printf("3");
+  }
+  if (digit == 4)
+  {
+       printf("4");
+  }
+  if (digit == 5)
+  {
+       printf("5");
+  }
+  if (digit == 6)
+  {
+       printf("6");
+  }
+  if (digit == 7)
+  {
+       printf("7");
+  }
+  if (digit == 8)
+  {
+       printf("8");
+  }
+  if (digit == 9)
+  {
+       printf("9");
+  }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RenderOptions PresetName="High">
+	<FOV>60.000000</FOV>
+	<TextureQuality>1</TextureQuality>
+	<TextureQualityEx>2</TextureQualityEx>
+	<LODDistanceScale>0.900000</LODDistanceScale>
+	<AAMode>4</AAMode>
+	<ShadowQuality>3</ShadowQuality>
+	<AOQuality>2</AOQuality>
+	<BlurEnabled>true</BlurEnabled>
+	<BloomQuality>2</BloomQuality>
+	<EnvmapQuality>1</EnvmapQuality>
+	<MaterialQuality>1</MaterialQuality>
+	<EnvironmentQuality>2</EnvironmentQuality>
+	<FXQuality>2</FXQuality>
+	<GalaxyMapQuality>1</GalaxyMapQuality>
+	<SSAAMultiplier>1</SSAAMultiplier>
+	<DOFEnabled>1</DOFEnabled>
+	<TerrainQuality>2</TerrainQuality>
+	<TerrainLodBlendingQuality>1</TerrainLodBlendingQuality>
+	<GpuSchedulerMultiplier>0.0</GpuSchedulerMultiplier>
+	<SurfaceMaterialQuality>2</SurfaceMaterialQuality>
+	<SurfaceSamplerQuality>2</SurfaceSamplerQuality>
+	<JetConeQuality>2</JetConeQuality>
+	<VolumetricsQuality>2</VolumetricsQuality>
+</RenderOptions>

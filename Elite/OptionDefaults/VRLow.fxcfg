@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RenderOptions PresetName="VRLow">
+	<FOV>60.000000</FOV>
+	<TextureQuality>0</TextureQuality>
+	<LODDistanceScale>0.550000</LODDistanceScale>
+	<AAMode>0</AAMode>
+	<ShadowQuality>1</ShadowQuality>
+	<AOQuality>0</AOQuality>
+	<BlurEnabled>true</BlurEnabled>
+	<BloomQuality>0</BloomQuality>
+	<EnvmapQuality>0</EnvmapQuality>
+	<MaterialQuality>0</MaterialQuality>
+	<EnvironmentQuality>0</EnvironmentQuality>
+	<FXQuality>0</FXQuality>
+	<GalaxyMapQuality>0</GalaxyMapQuality>
+	<SSAAMultiplier>1</SSAAMultiplier>
+	<TerrainQuality>0</TerrainQuality>
+	<TerrainLodBlendingQuality>0</TerrainLodBlendingQuality>
+	<GpuSchedulerMultiplier>0.0</GpuSchedulerMultiplier>
+	<SurfaceMaterialQuality>0</SurfaceMaterialQuality>
+	<SurfaceSamplerQuality>0</SurfaceSamplerQuality>
+	<JetConeQuality>2</JetConeQuality>
+	<VolumetricsQuality>0</VolumetricsQuality>
+</RenderOptions>

@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards>
+    <card vendor="4318" device="7040" driverVersion="22.21.13.8476" name="NVIDIA GeForce GTX 1080">
+        <task name="TransformToSAPatchSpace(VertexFormat::DFPosition)" version="1" size="256" hash="a63f5ccf26258c8960d251ea456e1a7e06fd1f90">
+            <item work="4096" time="0.003040" />
+            <item work="4608" time="0.003776" />
+            <item work="4864" time="0.004000" />
+            <item work="5888" time="0.005120" />
+            <item work="11776" time="0.005632" />
+            <item work="16896" time="0.006688" />
+            <item work="17920" time="0.007712" />
+        </task>
+        <task name="TransformToSAPatchSpace(VertexFormat::DFPositionMaterialData)" version="1" size="256" hash="b44c1a0677e7389752902f8961b9059c4f8f8c8a">
+            <item work="4608" time="0.003712" />
+            <item work="4864" time="0.005120" />
+            <item work="5120" time="0.005632" />
+            <item work="6656" time="0.006144" />
+        </task>
+        <task name="NormalsAndAssembly_PosMaterialData" version="1" size="1" hash="69d6bade2dd126ca820369f24e27286fe84c01ec">
+            <item work="64" time="0.012096" />
+            <item work="128" time="0.014336" />
+            <item work="192" time="0.017024" />
+            <item work="256" time="0.020192" />
+            <item work="320" time="0.023552" />
+            <item work="384" time="0.027648" />
+            <item work="448" time="0.031744" />
+            <item work="512" time="0.035744" />
+            <item work="576" time="0.038912" />
+            <item work="640" time="0.043008" />
+            <item work="704" time="0.046080" />
+            <item work="768" time="0.049824" />
+            <item work="832" time="0.053248" />
+            <item work="896" time="0.057344" />
+            <item work="1024" time="0.061312" />
+        </task>
+        <task name="NormalsAndAssembly_PosNormalUVMaterialData" version="1" size="1" hash="5897ddb49589516c5bb335e77cb0d066e8bceb39">
+            <item work="64" time="0.017024" />
+            <item work="128" time="0.023328" />
+            <item work="192" time="0.028256" />
+            <item work="256" time="0.035744" />
+            <item work="320" time="0.042720" />
+            <item work="384" time="0.050912" />
+            <item work="448" time="0.056224" />
+            <item work="512" time="0.062976" />
+            <item work="576" time="0.069600" />
+            <item work="640" time="0.076800" />
+            <item work="704" time="0.082464" />
+            <item work="768" time="0.089824" />
+            <item work="832" time="0.096064" />
+            <item work="896" time="0.102400" />
+            <item work="960" time="0.108544" />
+            <item work="1024" time="0.115712" />
+        </task>
+        <task name="NormalsAndAssembly_PosNormalUV" version="1" size="1" hash="5c034b882eca9e335e123793ae01a7fa8f329df2">
+            <item work="64" time="0.012224" />
+            <item work="128" time="0.014336" />
+            <item work="192" time="0.017408" />
+            <item work="256" time="0.021248" />
+            <item work="320" time="0.024576" />
+            <item work="384" time="0.030720" />
+            <item work="448" time="0.034304" />
+            <item work="512" time="0.037888" />
+            <item work="576" time="0.039904" />
+            <item work="640" time="0.044032" />
+            <item work="704" time="0.047008" />
+            <item work="768" time="0.051104" />
+            <item work="832" time="0.055296" />
+            <item work="896" time="0.059392" />
+            <item work="1024" time="0.063488" />
+        </task>
+        <task name="NormalsAndAssembly_PosUV" version="1" size="1" hash="4f5794ec50bd746d9f06616cdd5c46b879859a71">
+            <item work="64" time="0.006144" />
+            <item work="192" time="0.007168" />
+            <item work="256" time="0.008032" />
+            <item work="320" time="0.009920" />
+            <item work="384" time="0.012288" />
+            <item work="448" time="0.014336" />
+            <item work="576" time="0.016000" />
+            <item work="640" time="0.017408" />
+            <item work="704" time="0.019360" />
+            <item work="768" time="0.020480" />
+            <item work="832" time="0.022400" />
+            <item work="896" time="0.024576" />
+            <item work="1024" time="0.026400" />
+        </task>
+        <task name="NormalsAndAssembly_PosNormal" version="1" size="1" hash="e3c89140529fbadaeedeccaa34efb29e87cd6a6b">
+            <item work="64" time="0.008032" />
+            <item work="128" time="0.010112" />
+            <item work="192" time="0.011264" />
+            <item work="256" time="0.012928" />
+            <item work="320" time="0.015136" />
+            <item work="384" time="0.017408" />
+            <item work="448" time="0.018432" />
+            <item work="576" time="0.019456" />
+            <item work="640" time="0.021152" />
+            <item work="768" time="0.023136" />
+            <item work="896" time="0.026336" />
+            <item work="960" time="0.029600" />
+            <item work="1024" time="0.031296" />
+        </task>
+        <task name="Skirts(VertexFormat::DFPosition, PatchVertexFormat::PositionNormalMaterialData)" version="2" size="153" hash="58b99289c37c4be6c860ca979ee61737ab19df8d">
+            <item work="765" time="0.005632" />
+        </task>
+        <task name="Skirts(VertexFormat::DFPosition, PatchVertexFormat::PositionNormalUVMaterialData)" version="2" size="153" hash="84c38c9752ced8e34807a3ff0d29fb9daea1f787">
+            <item work="765" time="0.006880" />
+        </task>
+        <task name="Skirts(VertexFormat::DFPosition, PatchVertexFormat::PositionNormalUV)" version="2" size="153" hash="f90ec89f75320f510ad7e16ab9250c4762250d26">
+            <item work="612" time="0.005120" />
+            <item work="765" time="0.006048" />
+        </task>
+        <task name="Skirts(VertexFormat::DFPosition, PatchVertexFormat::PositionUV)" version="2" size="153" hash="aa65d798eb1578b949dd14a21d27f8db975838bc">
+            <item work="765" time="0.005120" />
+        </task>
+        <task name="BoundingBoxCalculation" version="1" size="2048" hash="b5e2a7658bfd3f3ec6805be03d365a7c516b8ea2">
+            <item work="10240" time="0.006144" />
+            <item work="20736" time="0.006816" />
+        </task>
+        <task name="NormalsAndAssembly_TexturePosNormalMaterialDataSlope" version="1" size="1" hash="0c6118799dde81928189b03f23ca1bcf4e8c08b9">
+            <item work="64" time="0.011264" />
+            <item work="128" time="0.016192" />
+            <item work="192" time="0.018432" />
+            <item work="256" time="0.021504" />
+            <item work="320" time="0.024576" />
+            <item work="384" time="0.029472" />
+            <item work="448" time="0.033408" />
+            <item work="512" time="0.035840" />
+            <item work="576" time="0.039936" />
+            <item work="640" time="0.044032" />
+            <item work="704" time="0.047072" />
+            <item work="768" time="0.052096" />
+            <item work="832" time="0.055936" />
+            <item work="1024" time="0.059392" />
+        </task>
+        <task name="NormalsAndAssembly_TextureNormalMaterialData" version="1" size="1" hash="06c7976daf387d6ed456f5270a86463cc8cb0d18">
+            <item work="64" time="0.009216" />
+            <item work="128" time="0.013312" />
+            <item work="192" time="0.015360" />
+            <item work="256" time="0.017920" />
+            <item work="320" time="0.021440" />
+            <item work="384" time="0.024128" />
+            <item work="448" time="0.027168" />
+            <item work="512" time="0.029440" />
+            <item work="576" time="0.031744" />
+            <item work="640" time="0.035424" />
+            <item work="704" time="0.037888" />
+            <item work="768" time="0.040960" />
+            <item work="832" time="0.043584" />
+            <item work="896" time="0.046080" />
+            <item work="1024" time="0.049152" />
+        </task>
+        <task name="PatchLighting_ShadowAOGeneration" version="1" size="256" hash="44eded9704e09ef1b5ba70404da48aff0f8f92fe">
+            <item work="1280" time="0.771072" />
+            <item work="3072" time="0.812032" />
+            <item work="3840" time="0.984864" />
+            <item work="4096" time="1.165184" />
+            <item work="5120" time="1.317760" />
+            <item work="5888" time="1.659872" />
+            <item work="7168" time="1.748896" />
+            <item work="9216" time="1.893376" />
+            <item work="10240" time="2.043904" />
+            <item work="13312" time="2.871264" />
+            <item work="14080" time="3.256224" />
+            <item work="15360" time="3.492640" />
+            <item work="16384" time="3.880928" />
+            <item work="16896" time="4.240256" />
+        </task>
+        <task name="PatchLighting_ShadowAOGeneration_SP" version="1" size="256" hash="c9c40706fe356423beece7693604c6c1de160513">
+            <item work="2816" time="0.133088" />
+            <item work="3840" time="0.142080" />
+            <item work="5120" time="0.157152" />
+            <item work="6400" time="0.175616" />
+            <item work="10240" time="0.185216" />
+            <item work="15360" time="0.214944" />
+            <item work="16896" time="0.268288" />
+        </task>
+        <task name="PatchLighting_ShadowAOGeneration_SP_ShadowsOnly" version="1" size="256" hash="c9c40706fe356423beece7693604c6c1de160513">
+            <item work="3840" time="0.021504" />
+            <item work="4096" time="0.027200" />
+            <item work="5376" time="0.029504" />
+            <item work="10240" time="0.031328" />
+            <item work="15360" time="0.033728" />
+            <item work="16384" time="0.036864" />
+            <item work="16896" time="0.043008" />
+        </task>
+        <task name="PatchLighting_ShadowAOGeneration2_SP" version="1" size="256" hash="41a4738a29f8b82a603907e339cd174ed148942b">
+            <item work="5120" time="0.153120" />
+            <item work="7936" time="0.172032" />
+            <item work="10240" time="0.182272" />
+            <item work="13312" time="0.212768" />
+            <item work="15360" time="0.225280" />
+            <item work="16896" time="0.251456" />
+        </task>
+        <task name="PatchLighting_ShadowAOGeneration2_SP_ShadowsOnly" version="2" size="256" hash="41a4738a29f8b82a603907e339cd174ed148942b">
+            <item work="9472" time="0.025600" />
+            <item work="11264" time="0.027264" />
+            <item work="15360" time="0.029280" />
+            <item work="16896" time="0.032416" />
+        </task>
+        <task name="Morph(MorphVertex::Format::Position)" version="1" size="256" hash="92c72e1eefd6f80501a09d0708cb002072127623">
+            <item work="4352" time="0.006144" />
+            <item work="9472" time="0.007168" />
+            <item work="16896" time="0.007936" />
+            <item work="17406" time="0.009120" />
+        </task>
+        <task name="Morph(MorphVertex::Format::PositionNormalMaterialData)" version="1" size="256" hash="ba001c5d00c92663cb46e64d528e482f678f2cf1">
+            <item work="4608" time="0.006784" />
+            <item work="4864" time="0.008192" />
+            <item work="11776" time="0.008768" />
+            <item work="17406" time="0.009792" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::00_Shared_1" version="2" size="64" hash="ea6f433bdf11b0fac5dc108176f799534b29b9ac">
+            <item work="7168" time="0.190240" />
+            <item work="10240" time="0.222048" />
+            <item work="15360" time="0.237344" />
+            <item work="17408" time="0.289632" />
+            <item work="17728" time="0.311072" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::01_Preset_TectonicMask_ROCK_2" version="2" size="64" hash="7d81877d7a78e7f9052d13eecb7b0b0029199f3c">
+            <item work="6144" time="0.048928" />
+            <item work="7168" time="0.059232" />
+            <item work="10240" time="0.065440" />
+            <item work="15360" time="0.075776" />
+            <item work="17728" time="0.084704" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::02_Preset_LargeScaleDeformation_ROCK_5" version="2" size="64" hash="a46fc8be1cbc6d8ddcb157660070e37dc22f0b93">
+            <item work="6144" time="0.014336" />
+            <item work="10240" time="0.017408" />
+            <item work="17728" time="0.020384" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::03_Preset_Mountains_v2_ROCK_4" version="2" size="64" hash="8970e26c069eb2b62c4601e3d2d865db7c4e9ba4">
+            <item work="8192" time="0.056032" />
+            <item work="15360" time="0.085664" />
+            <item work="17728" time="0.168832" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::04_Preset_Craters_Large_v2_ROCK_6" version="2" size="64" hash="43d99e8dbb0798eee37c708e716213587f638474">
+            <item work="10240" time="0.188384" />
+            <item work="13312" time="0.277248" />
+            <item work="14336" time="0.341920" />
+            <item work="17728" time="0.362400" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::05_Preset_LargeScaleFeatures_ROCK_13" version="2" size="64" hash="7e284e54f3c0daf91f5c4cb80a7b6d90bc2c2bd1">
+            <item work="9216" time="0.016192" />
+            <item work="10240" time="0.019456" />
+            <item work="17728" time="0.021312" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::06_Preset_Hills_ROCK_14" version="2" size="64" hash="456b6c175dfd5764e81a5f585c667037c2624724">
+            <item work="7168" time="0.185152" />
+            <item work="12288" time="0.210880" />
+            <item work="15360" time="0.247680" />
+            <item work="17728" time="0.273408" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::07_Preset_Craters_Small_ROCK_10" version="2" size="64" hash="add2e139c695330439dcf9b95c3720002c49343f">
+            <item work="10240" time="0.032576" />
+            <item work="17728" time="0.049984" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::08_Preset_PerlinCraters_Small_ROCK_8" version="2" size="64" hash="777dd6310a3900c8fdadcdce98d0248f1daa4a63">
+            <item work="17728" time="0.038464" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::09_Root_new_StellarForgeInputCommonVariables25" version="2" size="64" hash="d145b37e5e1eb3d73d56ba02018ed6625a285d68">
+            <item work="3072" time="0.004096" />
+            <item work="13312" time="0.004704" />
+            <item work="15360" time="0.005888" />
+            <item work="17728" time="0.007008" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::10_Preset_POI_9" version="2" size="64" hash="fc297ba17595b981045c501635ab69403bca6e27">
+            <item work="9216" time="0.029312" />
+            <item work="17728" time="0.031552" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere::11_Preset_RingSnow_ROCK_0" version="2" size="64" hash="7a9672428e606e9cfde014a96f4ad77167df30af">
+            <item work="6144" time="0.009984" />
+            <item work="11264" time="0.011040" />
+            <item work="17728" time="0.012000" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::00_Shared_1" version="2" size="64" hash="4139a534ee494052e11729181e930ec73d54acc3">
+            <item work="6144" time="0.047008" />
+            <item work="9216" time="0.049952" />
+            <item work="12288" time="0.056224" />
+            <item work="14336" time="0.061184" />
+            <item work="17728" time="0.065504" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::01_Preset_TectonicMask_ROCK_2" version="2" size="64" hash="e65be1cc5599cb243a05eeaa8ca8b9c625043293">
+            <item work="7168" time="0.014112" />
+            <item work="10240" time="0.016064" />
+            <item work="13312" time="0.017184" />
+            <item work="17728" time="0.018208" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::02_Preset_LargeScaleDeformation_ROCK_5" version="2" size="64" hash="9ae6b226ecfae8d3bfb202f2a2234da762588d73">
+            <item work="6144" time="0.007104" />
+            <item work="17728" time="0.007872" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::03_Preset_Mountains_v2_ROCK_4" version="2" size="64" hash="e9e287dd372ce13c59d9411cbcc3f01f04f93aa3">
+            <item work="17728" time="0.020224" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::04_Preset_Craters_Large_v2_ROCK_6" version="2" size="64" hash="a8b7fb3c9080db6cdc323474afa7e28d991b0fe2">
+            <item work="17728" time="0.032576" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::05_Preset_LargeScaleFeatures_ROCK_13" version="2" size="64" hash="fad54ab1ae9bc3f7fc682c9076acde21a90dd275">
+            <item work="9216" time="0.006816" />
+            <item work="17728" time="0.007872" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::06_Preset_Hills_ROCK_14" version="2" size="64" hash="213dd0375fdab26592006da88de5e922eecf3974">
+            <item work="9216" time="0.039552" />
+            <item work="12288" time="0.043872" />
+            <item work="14336" time="0.048128" />
+            <item work="17728" time="0.053216" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::07_Preset_Craters_Small_ROCK_10" version="2" size="64" hash="7d48df7d6452c2faf26993587fe2e35e1630742a">
+            <item work="8192" time="0.011264" />
+            <item work="17728" time="0.012000" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::08_Preset_PerlinCraters_Small_ROCK_8" version="2" size="64" hash="3371c147c38434345c9c40141581df99147c19e3">
+            <item work="8192" time="0.009216" />
+            <item work="17728" time="0.009728" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::09_Root_new_StellarForgeInputCommonVariables25" version="2" size="64" hash="0d53bb867de376d4e94f6b3c70c4a76a3681d13e">
+            <item work="2048" time="0.004096" />
+            <item work="17728" time="0.004672" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::10_Preset_POI_9" version="2" size="64" hash="53847431efe0b9ad84e8f5c8b5fc605b330e9f08">
+            <item work="9216" time="0.009120" />
+            <item work="17728" time="0.009856" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_VtxSP::11_Preset_RingSnow_ROCK_0" version="2" size="64" hash="dfd9b318637346b0cb61e4dc5b4bb8818b2514ee">
+            <item work="5120" time="0.005120" />
+            <item work="12288" time="0.006048" />
+            <item work="17728" time="0.007008" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::00_Shared_1" version="2" size="64" hash="9de2bd0936fc20a5bbf1f1b6253a15377261dc59">
+            <item work="7168" time="0.191424" />
+            <item work="10240" time="0.215904" />
+            <item work="12288" time="0.241600" />
+            <item work="15360" time="0.262080" />
+            <item work="17728" time="0.380768" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::01_Preset_Craters_Large_v2_ROCK_6" version="2" size="64" hash="82b6d6a620be20e8e642e2e21e3a643f0d34612e">
+            <item work="7168" time="0.204704" />
+            <item work="9216" time="0.310048" />
+            <item work="10240" time="0.341920" />
+            <item work="11264" time="0.386048" />
+            <item work="15360" time="0.415744" />
+            <item work="17728" time="0.530336" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::02_Preset_TectonicMask_ROCK_2" version="2" size="64" hash="3e0561f55cf3e399c471e757f936937cc4aeddcc">
+            <item work="5120" time="0.056320" />
+            <item work="7168" time="0.059392" />
+            <item work="10240" time="0.068320" />
+            <item work="12288" time="0.075648" />
+            <item work="15360" time="0.079680" />
+            <item work="17728" time="0.086016" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::03_Preset_LargeScaleDeformation_ROCK_5" version="2" size="64" hash="73b0bd4b9fed5b219dc2392f365b053823b55c6d">
+            <item work="10240" time="0.017056" />
+            <item work="14336" time="0.020448" />
+            <item work="17728" time="0.022496" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::04_Preset_Mountains_v2_ROCK_4" version="2" size="64" hash="23be4e16ed82779b5480f94a3fa2b5d2f2231ea7">
+            <item work="9216" time="0.084576" />
+            <item work="11264" time="0.090016" />
+            <item work="13312" time="0.095904" />
+            <item work="15360" time="0.102336" />
+            <item work="17728" time="0.181216" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::05_Preset_LargeScaleFeatures_ROCK_13" version="2" size="64" hash="b88f56087bcd66b92c59569da91428fd06b884cf">
+            <item work="8192" time="0.018432" />
+            <item work="10240" time="0.020224" />
+            <item work="15360" time="0.022464" />
+            <item work="17728" time="0.024448" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::06_Preset_Hills_ROCK_14" version="2" size="64" hash="4eb17267be37d6b43a489ac8cddba680df53faf3">
+            <item work="2048" time="0.142336" />
+            <item work="7168" time="0.177984" />
+            <item work="9216" time="0.208896" />
+            <item work="10240" time="0.220160" />
+            <item work="12288" time="0.241632" />
+            <item work="16384" time="0.353024" />
+            <item work="17728" time="0.372736" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::07_Preset_Craters_Small_ROCK_10" version="2" size="64" hash="8c23991ed080440a3d4390ec59082149ecb96fa1">
+            <item work="2048" time="0.032768" />
+            <item work="10240" time="0.046720" />
+            <item work="14336" time="0.052192" />
+            <item work="17728" time="0.056288" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::08_Preset_PerlinCraters_Small_ROCK_8" version="2" size="64" hash="43585b7e3458e2ed7e274da93c334c3cfa95bc0f">
+            <item work="2048" time="0.026624" />
+            <item work="10240" time="0.035712" />
+            <item work="17728" time="0.039840" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::09_Root_new_StellarForgeInputCommonVariables25" version="2" size="64" hash="547dd8821ce1c37159ea659665256be78455cbad">
+            <item work="9216" time="0.002784" />
+            <item work="10240" time="0.003904" />
+            <item work="12288" time="0.004992" />
+            <item work="14336" time="0.005792" />
+            <item work="16384" time="0.006912" />
+            <item work="17728" time="0.008064" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::10_Preset_POI_9" version="2" size="64" hash="8c64f1d75dfb604bc856715cf7434e3c7429ca7f">
+            <item work="8192" time="0.031712" />
+            <item work="12288" time="0.033696" />
+            <item work="13312" time="0.036832" />
+            <item work="14336" time="0.039776" />
+            <item work="16384" time="0.041984" />
+            <item work="17728" time="0.046048" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::11_Root_new_POIMaterialOverride3" version="2" size="64" hash="b7b90bc96f8a50bc938592a6428977e8c4c8bc72">
+            <item work="4096" time="0.010240" />
+            <item work="10240" time="0.010976" />
+            <item work="11264" time="0.012256" />
+            <item work="12288" time="0.013152" />
+            <item work="13312" time="0.014336" />
+            <item work="14336" time="0.015360" />
+            <item work="16384" time="0.016320" />
+            <item work="17728" time="0.017216" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::12_Preset_Screen_7" version="2" size="64" hash="9c0629df9e0d48d544ddfe77a7416d83793b46f0">
+            <item work="3072" time="0.006144" />
+            <item work="6144" time="0.006912" />
+            <item work="9216" time="0.007936" />
+            <item work="12288" time="0.008960" />
+            <item work="14336" time="0.010976" />
+            <item work="17408" time="0.012864" />
+            <item work="17728" time="0.014272" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials::13_Preset_RingSnow_ROCK_0" version="2" size="64" hash="281f6be408398e5bb9db121012fb7f52a7d629b2">
+            <item work="7168" time="0.099104" />
+            <item work="10240" time="0.117728" />
+            <item work="12288" time="0.129792" />
+            <item work="17728" time="0.170816" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::00_Shared_1" version="2" size="64" hash="93e1223bf769ad45ed4259b86f126724a8a47304">
+            <item work="7168" time="0.047776" />
+            <item work="9216" time="0.052064" />
+            <item work="12288" time="0.056320" />
+            <item work="14336" time="0.063264" />
+            <item work="16384" time="0.068320" />
+            <item work="17408" time="0.072640" />
+            <item work="19456" time="0.079840" />
+            <item work="22528" time="0.086880" />
+            <item work="25600" time="0.099072" />
+            <item work="28672" time="0.107520" />
+            <item work="34816" time="0.115264" />
+            <item work="39936" time="0.134144" />
+            <item work="51200" time="0.157696" />
+            <item work="55296" time="0.180096" />
+            <item work="59392" time="0.190080" />
+            <item work="67648" time="0.207616" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::01_Preset_Craters_Large_v2_ROCK_6" version="2" size="64" hash="5dc61fe29a25d8141f622ff34f6d84e55c025c10">
+            <item work="17408" time="0.037504" />
+            <item work="19456" time="0.054208" />
+            <item work="20480" time="0.057856" />
+            <item work="35840" time="0.066496" />
+            <item work="37888" time="0.086016" />
+            <item work="51200" time="0.091104" />
+            <item work="53248" time="0.104256" />
+            <item work="57344" time="0.117536" />
+            <item work="66560" time="0.126976" />
+            <item work="67648" time="0.141184" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::02_Preset_TectonicMask_ROCK_2" version="2" size="64" hash="f8622936a5a5d0c2a6fc724bb2ab9e6d71bf0522">
+            <item work="3072" time="0.014336" />
+            <item work="4096" time="0.015296" />
+            <item work="5120" time="0.016160" />
+            <item work="7168" time="0.017248" />
+            <item work="10240" time="0.018272" />
+            <item work="12288" time="0.019424" />
+            <item work="15360" time="0.021408" />
+            <item work="17408" time="0.023424" />
+            <item work="19456" time="0.025344" />
+            <item work="22528" time="0.028640" />
+            <item work="23552" time="0.032544" />
+            <item work="27648" time="0.034816" />
+            <item work="29696" time="0.039936" />
+            <item work="33792" time="0.042912" />
+            <item work="39936" time="0.049152" />
+            <item work="47104" time="0.053248" />
+            <item work="50176" time="0.059392" />
+            <item work="57344" time="0.063328" />
+            <item work="61440" time="0.067552" />
+            <item work="67648" time="0.073248" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::03_Preset_LargeScaleDeformation_ROCK_5" version="2" size="64" hash="99de7e097de6bfc3cc5a7012d3878d338ad7fc94">
+            <item work="7168" time="0.007072" />
+            <item work="16384" time="0.007840" />
+            <item work="18432" time="0.008704" />
+            <item work="22528" time="0.009984" />
+            <item work="23552" time="0.011008" />
+            <item work="26624" time="0.012032" />
+            <item work="28672" time="0.013120" />
+            <item work="31744" time="0.014304" />
+            <item work="33792" time="0.015264" />
+            <item work="38912" time="0.016224" />
+            <item work="44032" time="0.017408" />
+            <item work="48128" time="0.019456" />
+            <item work="57344" time="0.021376" />
+            <item work="63488" time="0.024416" />
+            <item work="67648" time="0.026304" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::04_Preset_Mountains_v2_ROCK_4" version="2" size="64" hash="f6b73d35305bab721fa83fe8e6563e12c8c23a1f">
+            <item work="5120" time="0.020480" />
+            <item work="8192" time="0.022432" />
+            <item work="12288" time="0.024352" />
+            <item work="16384" time="0.026272" />
+            <item work="19456" time="0.028448" />
+            <item work="21504" time="0.031616" />
+            <item work="22528" time="0.035552" />
+            <item work="30720" time="0.040896" />
+            <item work="34816" time="0.043968" />
+            <item work="38912" time="0.047904" />
+            <item work="46080" time="0.052224" />
+            <item work="50176" time="0.058368" />
+            <item work="58368" time="0.063264" />
+            <item work="62464" time="0.071648" />
+            <item work="67648" time="0.076800" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::05_Preset_LargeScaleFeatures_ROCK_13" version="2" size="64" hash="c6592d4da7dcb4946b1af666a74e4f27fbb72e20">
+            <item work="3072" time="0.007168" />
+            <item work="6144" time="0.007840" />
+            <item work="11264" time="0.008832" />
+            <item work="14336" time="0.009952" />
+            <item work="18432" time="0.011232" />
+            <item work="20480" time="0.012064" />
+            <item work="21504" time="0.012928" />
+            <item work="24576" time="0.014016" />
+            <item work="25600" time="0.015360" />
+            <item work="29696" time="0.016352" />
+            <item work="31744" time="0.018240" />
+            <item work="35840" time="0.019360" />
+            <item work="40960" time="0.021504" />
+            <item work="46080" time="0.025472" />
+            <item work="49152" time="0.028448" />
+            <item work="55296" time="0.030688" />
+            <item work="61440" time="0.033760" />
+            <item work="67648" time="0.036736" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::06_Preset_Hills_ROCK_14" version="2" size="64" hash="6267f7f635f059a394b2ba2b09e9e143aaf4020f">
+            <item work="7168" time="0.039680" />
+            <item work="9216" time="0.044800" />
+            <item work="12288" time="0.048928" />
+            <item work="14336" time="0.055168" />
+            <item work="17408" time="0.061216" />
+            <item work="19456" time="0.067392" />
+            <item work="20480" time="0.073504" />
+            <item work="25600" time="0.091808" />
+            <item work="28672" time="0.100192" />
+            <item work="31744" time="0.111616" />
+            <item work="34816" time="0.123744" />
+            <item work="40960" time="0.135168" />
+            <item work="47104" time="0.156672" />
+            <item work="51200" time="0.169920" />
+            <item work="55296" time="0.182272" />
+            <item work="64512" time="0.196608" />
+            <item work="67648" time="0.220128" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::07_Preset_Craters_Small_ROCK_10" version="2" size="64" hash="4dc9bf80c119a1c383c00ede1ca361705bf62095">
+            <item work="3072" time="0.011968" />
+            <item work="7168" time="0.012960" />
+            <item work="11264" time="0.014048" />
+            <item work="14336" time="0.015008" />
+            <item work="16384" time="0.016320" />
+            <item work="20480" time="0.017216" />
+            <item work="22528" time="0.019232" />
+            <item work="25600" time="0.020448" />
+            <item work="28672" time="0.023552" />
+            <item work="32768" time="0.025600" />
+            <item work="35840" time="0.027584" />
+            <item work="39936" time="0.030208" />
+            <item work="43008" time="0.032320" />
+            <item work="46080" time="0.034624" />
+            <item work="49152" time="0.036512" />
+            <item work="52224" time="0.039520" />
+            <item work="55296" time="0.041952" />
+            <item work="62464" time="0.044832" />
+            <item work="67648" time="0.051040" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::08_Preset_PerlinCraters_Small_ROCK_8" version="2" size="64" hash="a95546d09bb10d1ae118a18d4af856cbda393aaa">
+            <item work="5120" time="0.009184" />
+            <item work="10240" time="0.009920" />
+            <item work="16384" time="0.010944" />
+            <item work="19456" time="0.012096" />
+            <item work="22528" time="0.012992" />
+            <item work="25600" time="0.014144" />
+            <item work="26624" time="0.015136" />
+            <item work="27648" time="0.016160" />
+            <item work="29696" time="0.017312" />
+            <item work="33792" time="0.018400" />
+            <item work="36864" time="0.020480" />
+            <item work="39936" time="0.022496" />
+            <item work="45056" time="0.024544" />
+            <item work="48128" time="0.027648" />
+            <item work="53248" time="0.029632" />
+            <item work="58368" time="0.031552" />
+            <item work="62464" time="0.033568" />
+            <item work="67648" time="0.035552" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::09_Root_new_StellarForgeInputCommonVariables25" version="2" size="64" hash="07bfbefbbf19b523dfd807e1e4e332f90bf95cd4">
+            <item work="6144" time="0.004096" />
+            <item work="17408" time="0.004768" />
+            <item work="19456" time="0.005888" />
+            <item work="22528" time="0.006944" />
+            <item work="23552" time="0.008096" />
+            <item work="27648" time="0.008992" />
+            <item work="29696" time="0.010176" />
+            <item work="32768" time="0.011008" />
+            <item work="34816" time="0.012096" />
+            <item work="38912" time="0.012960" />
+            <item work="41984" time="0.014272" />
+            <item work="44032" time="0.015168" />
+            <item work="48128" time="0.016384" />
+            <item work="53248" time="0.017376" />
+            <item work="57344" time="0.019392" />
+            <item work="62464" time="0.021344" />
+            <item work="67648" time="0.022528" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::10_Preset_POI_9" version="2" size="64" hash="7bf1b78a466337ec5a0fc9c7d3d3d4f8da003f94">
+            <item work="1024" time="0.009216" />
+            <item work="3072" time="0.010240" />
+            <item work="8192" time="0.010848" />
+            <item work="10240" time="0.012064" />
+            <item work="13312" time="0.012928" />
+            <item work="16384" time="0.014176" />
+            <item work="18432" time="0.015328" />
+            <item work="20480" time="0.016256" />
+            <item work="21504" time="0.017248" />
+            <item work="22528" time="0.018240" />
+            <item work="24576" time="0.019392" />
+            <item work="26624" time="0.021504" />
+            <item work="28672" time="0.024544" />
+            <item work="30720" time="0.027552" />
+            <item work="36864" time="0.030432" />
+            <item work="40960" time="0.034752" />
+            <item work="44032" time="0.038880" />
+            <item work="48128" time="0.041920" />
+            <item work="53248" time="0.045056" />
+            <item work="56320" time="0.048128" />
+            <item work="59392" time="0.051200" />
+            <item work="63488" time="0.056000" />
+            <item work="67648" time="0.059392" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::11_Root_new_POIMaterialOverride3" version="2" size="64" hash="ff5c0f61af84bcb27055ede6ecd4d2b2cbd2efd9">
+            <item work="2048" time="0.006144" />
+            <item work="10240" time="0.006784" />
+            <item work="17408" time="0.007712" />
+            <item work="19456" time="0.008992" />
+            <item work="21504" time="0.010176" />
+            <item work="23552" time="0.011072" />
+            <item work="24576" time="0.012192" />
+            <item work="26624" time="0.012928" />
+            <item work="28672" time="0.014272" />
+            <item work="29696" time="0.015264" />
+            <item work="35840" time="0.016096" />
+            <item work="38912" time="0.018400" />
+            <item work="45056" time="0.020448" />
+            <item work="51200" time="0.022496" />
+            <item work="58368" time="0.025600" />
+            <item work="62464" time="0.027648" />
+            <item work="67648" time="0.029664" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::12_Preset_Screen_7" version="2" size="64" hash="60ffee3f886592269e5b204bafc66a57d0bf94d7">
+            <item work="4096" time="0.005120" />
+            <item work="7168" time="0.005984" />
+            <item work="9216" time="0.006976" />
+            <item work="12288" time="0.008032" />
+            <item work="15360" time="0.008832" />
+            <item work="17408" time="0.009984" />
+            <item work="20480" time="0.010912" />
+            <item work="21504" time="0.012160" />
+            <item work="22528" time="0.013088" />
+            <item work="24576" time="0.014048" />
+            <item work="26624" time="0.015328" />
+            <item work="28672" time="0.017184" />
+            <item work="29696" time="0.018432" />
+            <item work="31744" time="0.019456" />
+            <item work="35840" time="0.021472" />
+            <item work="37888" time="0.024576" />
+            <item work="40960" time="0.026528" />
+            <item work="43008" time="0.028640" />
+            <item work="45056" time="0.030656" />
+            <item work="49152" time="0.032672" />
+            <item work="56320" time="0.035744" />
+            <item work="67648" time="0.039872" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_Materials_VtxSP::13_Preset_RingSnow_ROCK_0" version="2" size="64" hash="083f03a7dd576d68cc386bac4892eadba4d2df1e">
+            <item work="6144" time="0.021120" />
+            <item work="7168" time="0.023296" />
+            <item work="9216" time="0.024544" />
+            <item work="13312" time="0.026272" />
+            <item work="15360" time="0.028480" />
+            <item work="18432" time="0.030528" />
+            <item work="20480" time="0.032544" />
+            <item work="22528" time="0.035776" />
+            <item work="26624" time="0.039936" />
+            <item work="28672" time="0.043808" />
+            <item work="32768" time="0.046720" />
+            <item work="36864" time="0.051968" />
+            <item work="50176" time="0.057024" />
+            <item work="61440" time="0.067360" />
+            <item work="67648" time="0.075744" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::00_Shared_1" version="2" size="64" hash="f16c6f6c0df4308a0e2b6478e6cbfabb4a2913c2">
+            <item work="6592" time="0.191488" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::01_Preset_Craters_Large_v2_ROCK_6" version="2" size="64" hash="72c87ce36673ece20771c8813d7dcb8c93e15d94">
+            <item work="2048" time="0.140288" />
+            <item work="6592" time="0.204480" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::02_Preset_TectonicMask_ROCK_2" version="2" size="64" hash="4bae117d6af2e05c4348a95623a3d444a03d7e00">
+            <item work="6592" time="0.056320" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::03_Preset_LargeScaleDeformation_ROCK_5" version="2" size="64" hash="8cc7b6da59008a19ee742e1ea84b7ca7f48f0d1b">
+            <item work="6592" time="0.017984" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::04_Preset_Mountains_v2_ROCK_4" version="2" size="64" hash="828fbb1441faa3e7f71dcd07193defdc32147f19">
+            <item work="6592" time="0.081664" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::05_Preset_LargeScaleFeatures_ROCK_13" version="2" size="64" hash="9e876bd8c4889bc273772efb322e76d21d04765d">
+            <item work="5120" time="0.017408" />
+            <item work="6592" time="0.018336" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::06_Preset_Hills_ROCK_14" version="2" size="64" hash="96a3412ce4e6b8913a742f0688f8433311c83e6e">
+            <item work="5120" time="0.131072" />
+            <item work="6592" time="0.179008" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::07_Preset_Craters_Small_ROCK_10" version="2" size="64" hash="f6675190b123a1487aa55e1fbb2dd83012d1a9d1">
+            <item work="5120" time="0.029696" />
+            <item work="6592" time="0.044032" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::08_Preset_PerlinCraters_Small_ROCK_8" version="2" size="64" hash="3f10e81c80ce238b6c2738f8a55a408b2d9299b2">
+            <item work="6592" time="0.037536" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::09_Root_new_StellarForgeInputCommonVariables25" version="2" size="64" hash="95bc59fe71f4ec7c4683560ef9cfb102b8ef2df0">
+            <item work="6592" time="0.004640" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::10_Preset_POI_9" version="2" size="64" hash="86d74e2fd31fcd78f356f30d8933e1114aeb431b">
+            <item work="6592" time="0.030720" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::11_Root_new_POIMaterialOverride3" version="2" size="64" hash="a5c69aceba57007418f034bc6cb340976d3e539e">
+            <item work="4096" time="0.010240" />
+            <item work="6592" time="0.011104" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::12_Preset_Screen_7" version="2" size="64" hash="874277c866fa0f9031f04bd518cae6cbb2690bb9">
+            <item work="6144" time="0.005120" />
+            <item work="6592" time="0.006112" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_MaterialsEx_Physics::13_Preset_RingSnow_ROCK_0" version="2" size="64" hash="e345700c29e245d5ce5ac560b3dcaa3295eca2b0">
+            <item work="6592" time="0.097280" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::0_Shared_1" version="1" size="64" hash="898af90e8faf1b6d5f35dc8b83ddcb4cd363e31e">
+            <item work="32768" time="0.104032" />
+            <item work="65536" time="0.176128" />
+            <item work="98304" time="0.244544" />
+            <item work="131072" time="0.321024" />
+            <item work="163840" time="0.401152" />
+            <item work="196608" time="0.475936" />
+            <item work="229376" time="0.553760" />
+            <item work="262144" time="0.632768" />
+            <item work="294912" time="0.710624" />
+            <item work="327680" time="0.786368" />
+            <item work="360448" time="0.867200" />
+            <item work="393216" time="0.941760" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::1_Preset_Craters_Large_v2_ROCK_6" version="1" size="64" hash="832f1a7fb129e47f299ef5756685ebe978a02a72">
+            <item work="32768" time="0.054176" />
+            <item work="65536" time="0.078848" />
+            <item work="98304" time="0.102048" />
+            <item work="131072" time="0.128928" />
+            <item work="163840" time="0.155552" />
+            <item work="196608" time="0.178976" />
+            <item work="229376" time="0.204544" />
+            <item work="262144" time="0.229312" />
+            <item work="294912" time="0.254976" />
+            <item work="327680" time="0.279136" />
+            <item work="360448" time="0.305120" />
+            <item work="393216" time="0.328576" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::2_Preset_TectonicMask_ROCK_2" version="1" size="64" hash="0b2cef3f100e178f256a99acb3444fd05d652492">
+            <item work="32768" time="0.031712" />
+            <item work="65536" time="0.047104" />
+            <item work="98304" time="0.063360" />
+            <item work="131072" time="0.080896" />
+            <item work="163840" time="0.098144" />
+            <item work="196608" time="0.115392" />
+            <item work="229376" time="0.132992" />
+            <item work="262144" time="0.150496" />
+            <item work="294912" time="0.167936" />
+            <item work="327680" time="0.186112" />
+            <item work="360448" time="0.203616" />
+            <item work="393216" time="0.220160" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::3_Preset_Mountains_v2_ROCK_4" version="1" size="64" hash="42b443ec626be90d63ce606e41de3390e5f7a110">
+            <item work="32768" time="0.032576" />
+            <item work="65536" time="0.047104" />
+            <item work="98304" time="0.060416" />
+            <item work="131072" time="0.073728" />
+            <item work="163840" time="0.087872" />
+            <item work="196608" time="0.101184" />
+            <item work="229376" time="0.115296" />
+            <item work="262144" time="0.128992" />
+            <item work="294912" time="0.142240" />
+            <item work="327680" time="0.155616" />
+            <item work="360448" time="0.169952" />
+            <item work="393216" time="0.183968" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::4_Preset_LargeScaleDeformation_ROCK_5" version="1" size="64" hash="17103c0c7c9bc352e0d4f169b52fdae6cf42db5d">
+            <item work="32768" time="0.010176" />
+            <item work="65536" time="0.018176" />
+            <item work="98304" time="0.026496" />
+            <item work="131072" time="0.034816" />
+            <item work="163840" time="0.044032" />
+            <item work="196608" time="0.054016" />
+            <item work="229376" time="0.063296" />
+            <item work="262144" time="0.072384" />
+            <item work="294912" time="0.081568" />
+            <item work="327680" time="0.092032" />
+            <item work="360448" time="0.099968" />
+            <item work="393216" time="0.109568" />
+        </task>
+        <task name="Terrain_Rocky_NoAtmosphere_FeatureMap::5_Preset_Hills_ROCK_14" version="1" size="64" hash="8a098b8f5fc053a904f7ba4c8a6c03d1601ce545">
+            <item work="32768" time="0.096256" />
+            <item work="65536" time="0.153600" />
+            <item work="98304" time="0.218112" />
+            <item work="131072" time="0.283648" />
+            <item work="163840" time="0.352256" />
+            <item work="196608" time="0.419840" />
+            <item work="229376" time="0.487328" />
+            <item work="262144" time="0.553696" />
+            <item work="294912" time="0.621280" />
+            <item work="327680" time="0.691136" />
+            <item work="360448" time="0.756704" />
+            <item work="393216" time="0.824320" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::00_Shared_1" version="2" size="64" hash="8a860d7f53ba46ffd467d4dad35dca981e0cdf7b">
+            <item work="7168" time="0.158688" />
+            <item work="10240" time="0.179200" />
+            <item work="15360" time="0.192480" />
+            <item work="17728" time="0.224224" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::01_Preset_Mountains_v2_ICE_3" version="2" size="64" hash="cbaf9d10086a2f3a95507a337f9fcfb6fd392620">
+            <item work="17728" time="0.061440" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::02_Preset_Europa_v2_ICE_4" version="2" size="64" hash="ff2422ca640b56c70d647c3c299adfeeb9d57f49">
+            <item work="7168" time="0.362496" />
+            <item work="12288" time="0.581408" />
+            <item work="15360" time="0.616288" />
+            <item work="17728" time="0.798656" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::03_Preset_Screen_20" version="2" size="64" hash="a80a4bc2c9f547698153e5db2930dc092b2b3099">
+            <item work="3072" time="0.004096" />
+            <item work="7168" time="0.004736" />
+            <item work="17728" time="0.005856" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::04_Preset_Craters_Large_v2_ICE_2" version="2" size="64" hash="d7c13056f39f8aee2529e3959edd139982670bc0">
+            <item work="11264" time="0.229376" />
+            <item work="16384" time="0.355232" />
+            <item work="17728" time="0.396224" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::05_Preset_Hills_Ice_0" version="2" size="64" hash="6a86f67728ee694daa0d5fe9dc5fd810241f40dd">
+            <item work="10240" time="0.101984" />
+            <item work="15360" time="0.133120" />
+            <item work="17728" time="0.182112" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::06_Preset_Canyon_v2_ICE_18" version="2" size="64" hash="23259236739bd3538522c6c6d184e32c569fae2a">
+            <item work="10240" time="0.072384" />
+            <item work="17728" time="0.098304" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::07_Root_new_StellarForgeInputCommonVariables21" version="2" size="64" hash="8a597c1cbb793ee90e9dcce1bf88696f26c95003">
+            <item work="11264" time="0.003872" />
+            <item work="17728" time="0.004928" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::08_Preset_POI_12" version="2" size="64" hash="27b18eb3d3c22c9b51d79479e3fce943a245ed14">
+            <item work="10240" time="0.057024" />
+            <item work="17408" time="0.064128" />
+            <item work="17728" time="0.074688" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere::09_Preset_PolarMask_ICE_10" version="2" size="64" hash="e6e41039f45b8f9280fd88d913244f273cb477ba">
+            <item work="10240" time="0.009024" />
+            <item work="11264" time="0.010176" />
+            <item work="17408" time="0.011776" />
+            <item work="17728" time="0.019232" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::00_Shared_1" version="2" size="64" hash="e12416e85a57bdac6c39a203d4979201fbf1f515">
+            <item work="11264" time="0.035840" />
+            <item work="14336" time="0.044928" />
+            <item work="17728" time="0.049152" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::01_Preset_Mountains_v2_ICE_3" version="2" size="64" hash="282f6d5275ad9547881189effb831ca70b19b992">
+            <item work="10240" time="0.012224" />
+            <item work="11264" time="0.014304" />
+            <item work="17728" time="0.016064" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::02_Preset_Europa_v2_ICE_4" version="2" size="64" hash="40fb0a4994cf6a8b4c7c018856db4ea0f79df8ba">
+            <item work="7168" time="0.129952" />
+            <item work="10240" time="0.140992" />
+            <item work="12288" time="0.148992" />
+            <item work="17408" time="0.205824" />
+            <item work="17728" time="0.231424" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::03_Preset_Screen_20" version="2" size="64" hash="1a7dca79f3e042c9e69cee7f01740864e330e6ad">
+            <item work="11264" time="0.003040" />
+            <item work="16384" time="0.004096" />
+            <item work="17728" time="0.005088" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::04_Preset_Craters_Large_v2_ICE_2" version="2" size="64" hash="da677954f862073b09d569864e7e7617d2eccc32">
+            <item work="12288" time="0.041984" />
+            <item work="17728" time="0.045024" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::05_Preset_Hills_Ice_0" version="2" size="64" hash="e69b2da1fee68e8dc744ec433e32bf7d2e055d9f">
+            <item work="11264" time="0.022176" />
+            <item work="12288" time="0.026176" />
+            <item work="14336" time="0.027648" />
+            <item work="17728" time="0.029280" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::06_Preset_Canyon_v2_ICE_18" version="2" size="64" hash="59ae454be6db6c3c821316ddc643b8778b3772f9">
+            <item work="7168" time="0.017408" />
+            <item work="11264" time="0.019264" />
+            <item work="13312" time="0.020480" />
+            <item work="17728" time="0.022400" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::07_Root_new_StellarForgeInputCommonVariables21" version="2" size="64" hash="a29fa8ddaa84d2ff26e483a7680c323d471f3aaf">
+            <item work="11264" time="0.004096" />
+            <item work="14336" time="0.004672" />
+            <item work="17728" time="0.005024" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::08_Preset_POI_12" version="2" size="64" hash="aa1ee3202ab746c13da014d85854a76ddbc6a3ff">
+            <item work="12288" time="0.016064" />
+            <item work="15360" time="0.017280" />
+            <item work="17728" time="0.018272" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_VtxSP::09_Preset_PolarMask_ICE_10" version="2" size="64" hash="67e20daddc74ff1f7950d58538602d59e3da6ddc">
+            <item work="7168" time="0.005120" />
+            <item work="13312" time="0.005888" />
+            <item work="17728" time="0.006912" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::00_Shared_1" version="2" size="64" hash="cfbfef78cdea5afafc56575482509215de80ab84">
+            <item work="7168" time="0.175008" />
+            <item work="10240" time="0.187168" />
+            <item work="15360" time="0.212992" />
+            <item work="17728" time="0.326624" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::01_Preset_Mountains_v2_ICE_3" version="2" size="64" hash="ffdb5bbec99875a7beba1d04e86b514d14d1d837">
+            <item work="11264" time="0.062304" />
+            <item work="14336" time="0.070464" />
+            <item work="17728" time="0.078624" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::02_Preset_Europa_v2_ICE_4" version="2" size="64" hash="df2d5bec53760d1f6c91271066e4751fc123e869">
+            <item work="7168" time="0.364448" />
+            <item work="8192" time="0.590688" />
+            <item work="9216" time="0.641024" />
+            <item work="15360" time="0.696320" />
+            <item work="17728" time="0.981664" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::03_Preset_Screen_20" version="2" size="64" hash="535d5829405a37aaae2da9685e41f730be81056f">
+            <item work="2048" time="0.008192" />
+            <item work="5120" time="0.008896" />
+            <item work="6144" time="0.010208" />
+            <item work="10240" time="0.011104" />
+            <item work="11264" time="0.013152" />
+            <item work="12288" time="0.016160" />
+            <item work="13312" time="0.017344" />
+            <item work="14336" time="0.019392" />
+            <item work="15360" time="0.021152" />
+            <item work="17728" time="0.022304" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::04_Preset_Craters_Large_v2_ICE_2" version="2" size="64" hash="5cff8663cc1ca9024a278996557f3877cf2aea63">
+            <item work="7168" time="0.253536" />
+            <item work="10240" time="0.276288" />
+            <item work="11264" time="0.415648" />
+            <item work="17728" time="0.459296" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::05_Root_new_LinearScale5" version="2" size="64" hash="e2f0839bad549b77030670c767fb56fa306de613">
+            <item work="3072" time="0.005120" />
+            <item work="7168" time="0.005824" />
+            <item work="10240" time="0.006752" />
+            <item work="11264" time="0.007776" />
+            <item work="12288" time="0.010144" />
+            <item work="13312" time="0.011168" />
+            <item work="15360" time="0.013088" />
+            <item work="17728" time="0.014304" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::06_Preset_Hills_Ice_0" version="2" size="64" hash="582f67bf2ea85ec7d48bb6a158beee8368fceded">
+            <item work="7168" time="0.112448" />
+            <item work="10240" time="0.126624" />
+            <item work="12288" time="0.137216" />
+            <item work="15360" time="0.150496" />
+            <item work="17728" time="0.160768" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::07_Preset_Canyon_v2_ICE_18" version="2" size="64" hash="13a1eecef5377150adb5543afb868735cc119405">
+            <item work="7168" time="0.081632" />
+            <item work="10240" time="0.092096" />
+            <item work="15360" time="0.102304" />
+            <item work="17728" time="0.110080" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::08_Root_new_StellarForgeInputCommonVariables21" version="2" size="64" hash="aa894cddf97fc6e9913db6f2bcc1240717aa2efe">
+            <item work="10240" time="0.003072" />
+            <item work="11264" time="0.004096" />
+            <item work="12288" time="0.005120" />
+            <item work="13312" time="0.005792" />
+            <item work="15360" time="0.007136" />
+            <item work="17728" time="0.008032" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::09_Preset_POI_12" version="2" size="64" hash="690501b23539930bcc474c43bfb7b2aea5769625">
+            <item work="10240" time="0.059392" />
+            <item work="15360" time="0.066304" />
+            <item work="17728" time="0.073696" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::10_Preset_RingSnow_ICE_13" version="2" size="64" hash="8429c879b8c8d335a60b1e50fd681018dc48eb27">
+            <item work="4096" time="0.023552" />
+            <item work="8192" time="0.026496" />
+            <item work="10240" time="0.029504" />
+            <item work="12288" time="0.031488" />
+            <item work="14336" time="0.033696" />
+            <item work="17728" time="0.036864" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::11_Preset_Screen_7" version="2" size="64" hash="53bc8e80f4d9282d672a018c7d834af40bfffc53">
+            <item work="1024" time="0.005120" />
+            <item work="4096" time="0.005664" />
+            <item work="5120" time="0.006048" />
+            <item work="9216" time="0.007040" />
+            <item work="11264" time="0.008000" />
+            <item work="12288" time="0.008960" />
+            <item work="14336" time="0.009952" />
+            <item work="15360" time="0.011232" />
+            <item work="17728" time="0.012000" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::12_Preset_RingSnow_ICE_19" version="2" size="64" hash="67998bf911366b0f1d3e12f6a2484b7559d20f57">
+            <item work="3072" time="0.024576" />
+            <item work="5120" time="0.026464" />
+            <item work="8192" time="0.028544" />
+            <item work="10240" time="0.030272" />
+            <item work="12288" time="0.033472" />
+            <item work="14336" time="0.036736" />
+            <item work="17728" time="0.039840" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::13_Root_new_POIMaterialOverride13" version="2" size="64" hash="38e4c72ddf735fe983674529a2bc301023a10746">
+            <item work="3072" time="0.010112" />
+            <item work="10240" time="0.011008" />
+            <item work="11264" time="0.011904" />
+            <item work="13312" time="0.013024" />
+            <item work="14336" time="0.014144" />
+            <item work="15360" time="0.015328" />
+            <item work="17728" time="0.016288" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials::14_Preset_PolarMask_ICE_10" version="2" size="64" hash="1b05bc25e55169633908678899dca3bb76441b90">
+            <item work="5120" time="0.031264" />
+            <item work="9216" time="0.033568" />
+            <item work="11264" time="0.035552" />
+            <item work="13312" time="0.037792" />
+            <item work="17728" time="0.040864" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::00_Shared_1" version="2" size="64" hash="04fea7adbad7d806d99408321a8b8582bf8d9929">
+            <item work="10240" time="0.033568" />
+            <item work="11264" time="0.039904" />
+            <item work="14336" time="0.042944" />
+            <item work="17408" time="0.049152" />
+            <item work="19456" time="0.052960" />
+            <item work="22528" time="0.058272" />
+            <item work="25600" time="0.061408" />
+            <item work="30720" time="0.074496" />
+            <item work="35840" time="0.082688" />
+            <item work="38912" time="0.091104" />
+            <item work="47104" time="0.099232" />
+            <item work="49152" time="0.112640" />
+            <item work="62464" time="0.119808" />
+            <item work="67648" time="0.142048" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::01_Preset_Mountains_v2_ICE_3" version="2" size="64" hash="18a3d8942d3268f92e628c5a13f88a755b3792a9">
+            <item work="10240" time="0.012896" />
+            <item work="11264" time="0.017408" />
+            <item work="12288" time="0.019296" />
+            <item work="14336" time="0.020384" />
+            <item work="17408" time="0.022240" />
+            <item work="18432" time="0.024576" />
+            <item work="19456" time="0.026432" />
+            <item work="22528" time="0.031712" />
+            <item work="24576" time="0.036768" />
+            <item work="25600" time="0.039936" />
+            <item work="33792" time="0.042752" />
+            <item work="39936" time="0.048128" />
+            <item work="41984" time="0.051200" />
+            <item work="48128" time="0.055264" />
+            <item work="51200" time="0.058368" />
+            <item work="61440" time="0.062464" />
+            <item work="67648" time="0.067200" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::02_Preset_Europa_v2_ICE_4" version="2" size="64" hash="1171208748ad73bbf1b820058d6006f5707e53df">
+            <item work="10240" time="0.130912" />
+            <item work="12288" time="0.156448" />
+            <item work="16384" time="0.209824" />
+            <item work="19456" time="0.241472" />
+            <item work="24576" time="0.267168" />
+            <item work="25600" time="0.289792" />
+            <item work="33792" time="0.324608" />
+            <item work="36864" time="0.364512" />
+            <item work="37888" time="0.402400" />
+            <item work="45056" time="0.426752" />
+            <item work="49152" time="0.463872" />
+            <item work="61440" time="0.503584" />
+            <item work="67648" time="0.607040" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::03_Preset_Screen_20" version="2" size="64" hash="451e353eeb26b1d86107cddf3d6ffc09ca8a6c95">
+            <item work="3072" time="0.005024" />
+            <item work="5120" time="0.005824" />
+            <item work="8192" time="0.006848" />
+            <item work="10240" time="0.008032" />
+            <item work="12288" time="0.009056" />
+            <item work="14336" time="0.010080" />
+            <item work="16384" time="0.011168" />
+            <item work="17408" time="0.012224" />
+            <item work="18432" time="0.013280" />
+            <item work="20480" time="0.014304" />
+            <item work="21504" time="0.015328" />
+            <item work="22528" time="0.016160" />
+            <item work="23552" time="0.017408" />
+            <item work="24576" time="0.018400" />
+            <item work="26624" time="0.020160" />
+            <item work="28672" time="0.021504" />
+            <item work="31744" time="0.023552" />
+            <item work="33792" time="0.027456" />
+            <item work="36864" time="0.029568" />
+            <item work="38912" time="0.031744" />
+            <item work="40960" time="0.034720" />
+            <item work="44032" time="0.036864" />
+            <item work="46080" time="0.039552" />
+            <item work="50176" time="0.041888" />
+            <item work="54272" time="0.044896" />
+            <item work="58368" time="0.048000" />
+            <item work="63488" time="0.051200" />
+            <item work="67648" time="0.054240" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::04_Preset_Craters_Large_v2_ICE_2" version="2" size="64" hash="3beaa739fe25d9cf27ee3ba5dbcf33d87c9f5e95">
+            <item work="10240" time="0.045824" />
+            <item work="14336" time="0.050912" />
+            <item work="17408" time="0.056096" />
+            <item work="25600" time="0.098304" />
+            <item work="33792" time="0.105344" />
+            <item work="35840" time="0.114656" />
+            <item work="52224" time="0.150336" />
+            <item work="61440" time="0.176128" />
+            <item work="67648" time="0.215008" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::05_Root_new_LinearScale5" version="2" size="64" hash="628edbc6c276efd09991c18f8707a35bd6ddbf62">
+            <item work="1024" time="0.004096" />
+            <item work="6144" time="0.004640" />
+            <item work="10240" time="0.005792" />
+            <item work="14336" time="0.006848" />
+            <item work="16384" time="0.007936" />
+            <item work="18432" time="0.009120" />
+            <item work="19456" time="0.010112" />
+            <item work="21504" time="0.011232" />
+            <item work="22528" time="0.012128" />
+            <item work="23552" time="0.013312" />
+            <item work="25600" time="0.014304" />
+            <item work="27648" time="0.015360" />
+            <item work="31744" time="0.017280" />
+            <item work="35840" time="0.020352" />
+            <item work="39936" time="0.023488" />
+            <item work="41984" time="0.026432" />
+            <item work="45056" time="0.028576" />
+            <item work="49152" time="0.030688" />
+            <item work="53248" time="0.032768" />
+            <item work="62464" time="0.035680" />
+            <item work="67648" time="0.040832" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::06_Preset_Hills_Ice_0" version="2" size="64" hash="df1e2cc83c5ab339c4611dfa7bdd176ea2784663">
+            <item work="7168" time="0.024128" />
+            <item work="9216" time="0.027552" />
+            <item work="12288" time="0.029248" />
+            <item work="14336" time="0.032672" />
+            <item work="17408" time="0.035616" />
+            <item work="19456" time="0.039840" />
+            <item work="22528" time="0.041952" />
+            <item work="28672" time="0.055104" />
+            <item work="30720" time="0.062176" />
+            <item work="33792" time="0.066240" />
+            <item work="34816" time="0.071552" />
+            <item work="38912" time="0.075616" />
+            <item work="61440" time="0.079872" />
+            <item work="67648" time="0.088032" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::07_Preset_Canyon_v2_ICE_18" version="2" size="64" hash="5468e34b69eba910aef3775fb7a80ee306d5008d">
+            <item work="5120" time="0.018336" />
+            <item work="11264" time="0.020288" />
+            <item work="14336" time="0.023264" />
+            <item work="17408" time="0.025472" />
+            <item work="20480" time="0.029664" />
+            <item work="22528" time="0.033792" />
+            <item work="25600" time="0.037760" />
+            <item work="27648" time="0.043744" />
+            <item work="32768" time="0.046976" />
+            <item work="36864" time="0.051040" />
+            <item work="38912" time="0.056256" />
+            <item work="41984" time="0.059360" />
+            <item work="47104" time="0.063488" />
+            <item work="59392" time="0.069632" />
+            <item work="67648" time="0.079680" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::08_Root_new_StellarForgeInputCommonVariables21" version="2" size="64" hash="1d8f09d2e4e9e1cf0e99278d28e946add6fba836">
+            <item work="15360" time="0.004640" />
+            <item work="18432" time="0.005920" />
+            <item work="20480" time="0.007104" />
+            <item work="22528" time="0.008000" />
+            <item work="24576" time="0.009056" />
+            <item work="27648" time="0.010016" />
+            <item work="30720" time="0.010944" />
+            <item work="33792" time="0.011968" />
+            <item work="35840" time="0.013216" />
+            <item work="38912" time="0.014048" />
+            <item work="44032" time="0.015200" />
+            <item work="47104" time="0.017184" />
+            <item work="53248" time="0.018336" />
+            <item work="56320" time="0.020224" />
+            <item work="67584" time="0.021344" />
+            <item work="67648" time="0.023488" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::09_Preset_POI_12" version="2" size="64" hash="b2d9e094919ee9ae1e19f0a7aff9d54faa4a9985">
+            <item work="5120" time="0.017088" />
+            <item work="7168" time="0.018112" />
+            <item work="10240" time="0.019200" />
+            <item work="12288" time="0.020416" />
+            <item work="14336" time="0.022272" />
+            <item work="19456" time="0.023456" />
+            <item work="22528" time="0.026560" />
+            <item work="25600" time="0.028512" />
+            <item work="31744" time="0.032736" />
+            <item work="34816" time="0.035808" />
+            <item work="37888" time="0.037824" />
+            <item work="43008" time="0.040480" />
+            <item work="47104" time="0.043008" />
+            <item work="51200" time="0.046016" />
+            <item work="54272" time="0.050912" />
+            <item work="63488" time="0.054208" />
+            <item work="67648" time="0.058336" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::10_Preset_RingSnow_ICE_13" version="2" size="64" hash="f3775219fb4aeafecda56e7037287f0452c72eff">
+            <item work="1024" time="0.007168" />
+            <item work="6144" time="0.007808" />
+            <item work="9216" time="0.008896" />
+            <item work="10240" time="0.009984" />
+            <item work="12288" time="0.010912" />
+            <item work="14336" time="0.012000" />
+            <item work="15360" time="0.013184" />
+            <item work="17408" time="0.014144" />
+            <item work="18432" time="0.015296" />
+            <item work="19456" time="0.017376" />
+            <item work="20480" time="0.019392" />
+            <item work="22528" time="0.022336" />
+            <item work="23552" time="0.024576" />
+            <item work="25600" time="0.026240" />
+            <item work="27648" time="0.029504" />
+            <item work="29696" time="0.031744" />
+            <item work="31744" time="0.034816" />
+            <item work="34816" time="0.038400" />
+            <item work="37888" time="0.043008" />
+            <item work="40960" time="0.047968" />
+            <item work="44032" time="0.052128" />
+            <item work="48128" time="0.056320" />
+            <item work="53248" time="0.061376" />
+            <item work="57344" time="0.066560" />
+            <item work="62464" time="0.070624" />
+            <item work="67648" time="0.074688" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::11_Preset_Screen_7" version="2" size="64" hash="5f19dfec01c5aa2e3dd1394008d0e34accacd15e">
+            <item work="1024" time="0.004096" />
+            <item work="4096" time="0.004928" />
+            <item work="5120" time="0.005696" />
+            <item work="7168" time="0.006112" />
+            <item work="11264" time="0.006752" />
+            <item work="15360" time="0.007808" />
+            <item work="17408" time="0.008928" />
+            <item work="19456" time="0.010176" />
+            <item work="20480" time="0.011072" />
+            <item work="21504" time="0.012256" />
+            <item work="23552" time="0.013280" />
+            <item work="24576" time="0.013984" />
+            <item work="26624" time="0.015072" />
+            <item work="27648" time="0.016352" />
+            <item work="28672" time="0.017408" />
+            <item work="30720" time="0.018368" />
+            <item work="35840" time="0.019456" />
+            <item work="38912" time="0.022400" />
+            <item work="40960" time="0.024512" />
+            <item work="43008" time="0.026528" />
+            <item work="47104" time="0.028608" />
+            <item work="50176" time="0.030432" />
+            <item work="53248" time="0.032704" />
+            <item work="62464" time="0.034784" />
+            <item work="67648" time="0.038848" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::12_Preset_RingSnow_ICE_19" version="2" size="64" hash="d77af2c5e5dd3198114ef63b9be64d7e2090b91b">
+            <item work="4096" time="0.008064" />
+            <item work="7168" time="0.008896" />
+            <item work="9216" time="0.009920" />
+            <item work="11264" time="0.010816" />
+            <item work="12288" time="0.012256" />
+            <item work="13312" time="0.013056" />
+            <item work="16384" time="0.014240" />
+            <item work="17408" time="0.016032" />
+            <item work="18432" time="0.017344" />
+            <item work="19456" time="0.019296" />
+            <item work="20480" time="0.022336" />
+            <item work="21504" time="0.024544" />
+            <item work="22528" time="0.026624" />
+            <item work="24576" time="0.029440" />
+            <item work="26624" time="0.032512" />
+            <item work="27648" time="0.035712" />
+            <item work="28672" time="0.037856" />
+            <item work="30720" time="0.039936" />
+            <item work="32768" time="0.043008" />
+            <item work="35840" time="0.047072" />
+            <item work="38912" time="0.052224" />
+            <item work="41984" time="0.058304" />
+            <item work="46080" time="0.062432" />
+            <item work="49152" time="0.066560" />
+            <item work="53248" time="0.071232" />
+            <item work="57344" time="0.075776" />
+            <item work="63488" time="0.080736" />
+            <item work="67648" time="0.087872" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::13_Root_new_POIMaterialOverride13" version="2" size="64" hash="dfbe8a522dee794683b6426069c71f389713c99f">
+            <item work="2048" time="0.006144" />
+            <item work="10240" time="0.006752" />
+            <item work="15360" time="0.007840" />
+            <item work="18432" time="0.009056" />
+            <item work="21504" time="0.010112" />
+            <item work="23552" time="0.011264" />
+            <item work="24576" time="0.013184" />
+            <item work="27648" time="0.014080" />
+            <item work="29696" time="0.015328" />
+            <item work="32768" time="0.017184" />
+            <item work="35840" time="0.018144" />
+            <item work="38912" time="0.019456" />
+            <item work="47104" time="0.022400" />
+            <item work="54272" time="0.025600" />
+            <item work="67648" time="0.028320" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_Materials_VtxSP::14_Preset_PolarMask_ICE_10" version="2" size="64" hash="c9b80274b5a37132e85809f603e0d5382f76772c">
+            <item work="4096" time="0.009152" />
+            <item work="6144" time="0.010080" />
+            <item work="9216" time="0.010848" />
+            <item work="11264" time="0.012160" />
+            <item work="14336" time="0.013024" />
+            <item work="18432" time="0.014304" />
+            <item work="19456" time="0.016384" />
+            <item work="20480" time="0.017408" />
+            <item work="21504" time="0.018432" />
+            <item work="25600" time="0.019456" />
+            <item work="28672" time="0.022496" />
+            <item work="34816" time="0.024416" />
+            <item work="37888" time="0.027584" />
+            <item work="40960" time="0.030304" />
+            <item work="46080" time="0.032512" />
+            <item work="52224" time="0.035808" />
+            <item work="62464" time="0.039680" />
+            <item work="67648" time="0.042816" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::00_Shared_1" version="2" size="64" hash="0dcaaaf5e280483721ee814a7b23f69ede6c067b">
+            <item work="6592" time="0.174080" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::01_Preset_Mountains_v2_ICE_3" version="2" size="64" hash="a297113bed818492287ce6db772bee0d31799c47">
+            <item work="6592" time="0.059392" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::02_Preset_Europa_v2_ICE_4" version="2" size="64" hash="740926d597b131d143040bdd4291c759be2bae0c">
+            <item work="6592" time="0.359424" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::03_Preset_Screen_20" version="2" size="64" hash="276ca0f4c1060e2531b876b0df7ccb55bb13cd98">
+            <item work="4096" time="0.008096" />
+            <item work="6592" time="0.008960" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::04_Preset_Craters_Large_v2_ICE_2" version="2" size="64" hash="162b86ffb54cbb7c26c66f04f64a42c8a678ad65">
+            <item work="6592" time="0.252768" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::05_Root_new_LinearScale5" version="2" size="64" hash="c5b3f67c2c3a6976b704d5d48e96a591da2b41e9">
+            <item work="2048" time="0.005056" />
+            <item work="6592" time="0.005632" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::06_Preset_Hills_Ice_0" version="2" size="64" hash="f0f581277a9eb5ed9e59bdd6f4d51fd9e064d483">
+            <item work="6592" time="0.110528" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::07_Preset_Canyon_v2_ICE_18" version="2" size="64" hash="d5753c1e4ba68fb9c647c97382886b6d194a8cd4">
+            <item work="6592" time="0.080704" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::08_Root_new_StellarForgeInputCommonVariables21" version="2" size="64" hash="4bfe739d0b498b3d711aaa83074ae6f01e735e4c">
+            <item work="6592" time="0.004672" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::09_Preset_POI_12" version="2" size="64" hash="05cacfe94f11b9819290b4a8318becc62cfedf74">
+            <item work="6592" time="0.059168" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::10_Preset_RingSnow_ICE_13" version="2" size="64" hash="8e3c5296e12294d365fe42db5858dc6fc72ba5e7">
+            <item work="6592" time="0.023520" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::11_Preset_Screen_7" version="2" size="64" hash="b01f9e4d09fdb5a0374841bbe86921977e1f22d4">
+            <item work="1024" time="0.005120" />
+            <item work="6592" time="0.005760" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::12_Preset_RingSnow_ICE_19" version="2" size="64" hash="54deb549bee23e2089a26f7e624dc755704b9a60">
+            <item work="6592" time="0.025248" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::13_Root_new_POIMaterialOverride13" version="2" size="64" hash="cc7225c12f301229926c77b914d5f8096b2206c8">
+            <item work="5120" time="0.010080" />
+            <item work="6592" time="0.010944" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_MaterialsEx_Physics::14_Preset_PolarMask_ICE_10" version="2" size="64" hash="fe178b9d5d1d8c60d190284fe81ba99b3bc5f2f2">
+            <item work="6592" time="0.030560" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::0_Shared_1" version="1" size="64" hash="14c304d757aa1cbe9e788cb4781c06ccf8855932">
+            <item work="32768" time="0.082944" />
+            <item work="65536" time="0.135936" />
+            <item work="98304" time="0.196352" />
+            <item work="131072" time="0.256704" />
+            <item work="163840" time="0.319136" />
+            <item work="196608" time="0.382880" />
+            <item work="229376" time="0.443392" />
+            <item work="262144" time="0.504544" />
+            <item work="294912" time="0.567136" />
+            <item work="327680" time="0.629504" />
+            <item work="360448" time="0.692000" />
+            <item work="393216" time="0.757408" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::1_Preset_Mountains_v2_ICE_3" version="1" size="64" hash="22bfe50ffe8f578d5b28a04c600bd45db9f2269f">
+            <item work="32768" time="0.026624" />
+            <item work="65536" time="0.035552" />
+            <item work="98304" time="0.043936" />
+            <item work="131072" time="0.053792" />
+            <item work="163840" time="0.062208" />
+            <item work="196608" time="0.070400" />
+            <item work="229376" time="0.079872" />
+            <item work="262144" time="0.089920" />
+            <item work="294912" time="0.096160" />
+            <item work="327680" time="0.105408" />
+            <item work="360448" time="0.115296" />
+            <item work="393216" time="0.123680" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::2_Preset_Europa_v2_ICE_4" version="1" size="64" hash="fd56efbc256b139ee7dff0b4fc412606fe583e16">
+            <item work="32768" time="0.230400" />
+            <item work="65536" time="0.397920" />
+            <item work="98304" time="0.542592" />
+            <item work="131072" time="0.715584" />
+            <item work="163840" time="0.875328" />
+            <item work="196608" time="1.026784" />
+            <item work="229376" time="1.204064" />
+            <item work="262144" time="1.370912" />
+            <item work="294912" time="1.533952" />
+            <item work="327680" time="1.692608" />
+            <item work="360448" time="1.849312" />
+            <item work="393216" time="2.027424" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::3_Preset_Screen_20" version="1" size="64" hash="8a78bdba1a26c946e537846065d75f32afffd645">
+            <item work="32768" time="0.009184" />
+            <item work="65536" time="0.016064" />
+            <item work="98304" time="0.025472" />
+            <item work="131072" time="0.036576" />
+            <item work="163840" time="0.046912" />
+            <item work="196608" time="0.057152" />
+            <item work="229376" time="0.067264" />
+            <item work="262144" time="0.077664" />
+            <item work="294912" time="0.087904" />
+            <item work="327680" time="0.098976" />
+            <item work="360448" time="0.107520" />
+            <item work="393216" time="0.118432" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::4_Preset_Craters_Large_v2_ICE_2" version="1" size="64" hash="fba1c2166d48f955f7c4d79633ca956c90bafded">
+            <item work="32768" time="0.077536" />
+            <item work="65536" time="0.121856" />
+            <item work="98304" time="0.163584" />
+            <item work="131072" time="0.206848" />
+            <item work="163840" time="0.255552" />
+            <item work="196608" time="0.299744" />
+            <item work="229376" time="0.344000" />
+            <item work="262144" time="0.389920" />
+            <item work="294912" time="0.433728" />
+            <item work="327680" time="0.483136" />
+            <item work="360448" time="0.523168" />
+            <item work="393216" time="0.569216" />
+        </task>
+        <task name="Terrain_Icy_NoAtmosphere_FeatureMap::5_Preset_Hills_Ice_0" version="1" size="64" hash="663e48acffac30c95ff5fd4602329a0a7e9257c0">
+            <item work="32768" time="0.051200" />
+            <item work="65536" time="0.079424" />
+            <item work="98304" time="0.103424" />
+            <item work="131072" time="0.136992" />
+            <item work="163840" time="0.164800" />
+            <item work="196608" time="0.195456" />
+            <item work="229376" time="0.225120" />
+            <item work="262144" time="0.255776" />
+            <item work="294912" time="0.285696" />
+            <item work="327680" time="0.316032" />
+            <item work="360448" time="0.347104" />
+            <item work="393216" time="0.376640" />
+        </task>
+    </card>
+</cards>

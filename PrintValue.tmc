@@ -1,0 +1,112 @@
+include "target.tmh"
+
+//program startup
+int main()
+{
+    if(Init(&EventHandle)) return 1; // declare the event handler, return on error
+	printValue(564978);
+	//add initialization code here
+}
+
+//event handler
+int EventHandle(int type, alias o, int x)
+{
+    DefaultMapping(&o, x);
+	
+	//add event handling code here
+}
+
+int printValue(int value)
+{
+  int remainder = 0;
+  int result = 0;
+  int size = 0;
+  int divider = 0;
+  int i = 0;
+  
+  //GetSize
+  divider = 1;
+  size = 1;
+  result = value / divider;
+  while (result > 9)
+  {
+    size = size + 1;
+    divider = 1;
+    i = 1;
+    while (i < size)
+    {
+        i = i + 1;
+        divider = divider * 10;
+    }
+    result = value / divider;
+  }
+
+
+//  printf("Size: ");
+//  printDigit(size);
+//  printf("\xa");
+
+   
+//  printf("Value: ");
+  //Print all digits
+  int curValue = value;
+  while (size > 0)
+  {
+    divider = 1;
+    i = 1;
+    while (i < size)
+    {
+        i = i + 1;
+        divider = divider * 10;
+    }
+    result = curValue / divider;
+    curValue = curValue - (result * divider);
+    size = size - 1;
+    printDigit(result);
+  }
+//  printf("\xa");
+}
+
+int printDigit(int digit)
+{
+  if (digit == 0)
+  {
+       printf("0");
+  }
+  if (digit == 1)
+  {
+       printf("1");
+  }
+  if (digit == 2)
+  {
+       printf("2");
+  }
+  if (digit == 3)
+  {
+       printf("3");
+  }
+  if (digit == 4)
+  {
+       printf("4");
+  }
+  if (digit == 5)
+  {
+       printf("5");
+  }
+  if (digit == 6)
+  {
+       printf("6");
+  }
+  if (digit == 7)
+  {
+       printf("7");
+  }
+  if (digit == 8)
+  {
+       printf("8");
+  }
+  if (digit == 9)
+  {
+       printf("9");
+  }
+}

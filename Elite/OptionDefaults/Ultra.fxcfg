@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RenderOptions PresetName="Ultra">
+	<FOV>60.000000</FOV>
+	<TextureQuality>1</TextureQuality>
+	<TextureQualityEx>2</TextureQualityEx>
+	<LODDistanceScale>1.000000</LODDistanceScale>
+	<AAMode>4</AAMode>
+	<ShadowQuality>4</ShadowQuality>
+	<AOQuality>3</AOQuality>
+	<BlurEnabled>true</BlurEnabled>
+	<BloomQuality>2</BloomQuality>
+	<EnvmapQuality>1</EnvmapQuality>
+	<MaterialQuality>3</MaterialQuality>
+	<EnvironmentQuality>3</EnvironmentQuality>
+	<FXQuality>3</FXQuality>
+	<GalaxyMapQuality>2</GalaxyMapQuality>
+	<SSAAMultiplier>1</SSAAMultiplier>
+	<DOFEnabled>2</DOFEnabled>
+	<TerrainQuality>3</TerrainQuality>
+	<TerrainLodBlendingQuality>2</TerrainLodBlendingQuality>
+	<GpuSchedulerMultiplier>0.5</GpuSchedulerMultiplier>
+	<SurfaceMaterialQuality>3</SurfaceMaterialQuality>
+	<SurfaceSamplerQuality>3</SurfaceSamplerQuality>
+	<JetConeQuality>3</JetConeQuality>
+	<VolumetricsQuality>3</VolumetricsQuality>
+</RenderOptions>
