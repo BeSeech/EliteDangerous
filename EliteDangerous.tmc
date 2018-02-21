@@ -19,6 +19,7 @@ int toShield;
 int toEngine;
 int toWeapon;
 int restoreEnergyTo;
+int REXECRepeatBoost;
 
 //program startup
 int main()
@@ -28,6 +29,8 @@ int main()
     
     isInit = 0;
     relogCount = 0;
+	SetREXECConstants();
+    
     MyInit();
     DoAxis();
     ApplyState();
@@ -44,7 +47,15 @@ int main()
 	ApplyOther();
 	Ready();
 	ApplyEnergyAllocation();
+	SetShiftButtons();
+	
 }
+
+int SetREXECConstants()
+{
+    REXECRepeatBoost = 1;
+}
+
 
 //event handler
 int EventHandle(int type, alias o, int x)
@@ -52,6 +63,11 @@ int EventHandle(int type, alias o, int x)
     DefaultMapping(&o, x);
 	
 	//add event handling code here
+}
+
+int SetShiftButtons()
+{
+    SetShiftButton(&Joystick, H2D, &Throttle, PSF, PSB);
 }
 
 int SetEnergyTo(int target)
@@ -129,7 +145,7 @@ int ProcessState(int State)
   {
     printf("State == 0; \xa");
     ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED1)); 
-    SetShieldsCellBank(priorState, 0);
+    //SetShieldsCellBank(priorState, 0);
     //DoSome();
   }
 
@@ -137,14 +153,14 @@ int ProcessState(int State)
   {
     printf("State == 1; \xa");
     ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED2)); 
-    SetShieldsCellBank(priorState, 1);
+    //SetShieldsCellBank(priorState, 1);
     //DoSome();
   }
   if (State == 2)
   {
     printf("State == 2; \xa");
     ActKey(PULSE+KEYON+LED(&Throttle, LED_ONOFF, LED_CURRENT + LED3)); 
-    SetShieldsCellBank(priorState, 2);
+    //SetShieldsCellBank(priorState, 2);
     //DoSome();
   }
 
@@ -256,7 +272,8 @@ int ApplyDX()
   MapKeyR(&Throttle, APALT, PULSE+ ESC);
   MapKey(&Throttle, APALT, PULSE+ ESC);
 
-  MapKey(&Throttle, APDIS, CHAIN(PULSE+'h', D(), EXEC("MoveMouseCursorToCenter();")));
+
+  MapKeyUMD(&Throttle, APDIS, CHAIN(PULSE+'h', D(), EXEC("MoveMouseCursorToCenter();")), PULSE + 'm', PULSE + 'm');  
   
   MapKey(&Throttle, APALT, EXEC("printf(\"\\xa RelogCount = \"); printValue(relogCount); printf(\"\\xa\");"));
 }
@@ -548,8 +565,15 @@ int SetShieldsCellBank(int priorCellBankNumber, int cellBankNumber)
 
 int ApplyChangeShieldsCellBank()
 {
-    MapKey(&Throttle,  EFRNORM, DOWN + DX1); 
-    MapKeyR(&Throttle,  EFRNORM, UP + DX1); 
+    MapKeyUMD(&Throttle,  EFRNORM, 
+        DOWN + DX1, 
+        REXEC(REXECRepeatBoost, 2000, "ActKey(PULSE+KEYON+DX27);" , RNOSTOP),
+        DOWN + DX1); 
+        
+    MapKeyRUMD(&Throttle,  EFRNORM, 
+        UP + DX1,
+        EXEC("StopAutoRepeat(REXECRepeatBoost);"),
+        UP + DX1); 
 }
 
 int ApplyJCurves()
@@ -625,14 +649,18 @@ int ApplyCH()
 
 int ApplyRest()
 {
-  MapKey(&Throttle, LDGH, 
+  MapKeyUMD(&Throttle, LDGH, 
     CHAIN(
     PULSE+'0',D(100),
     PULSE+'0',D(100),
     PULSE+'0',D(100),
     PULSE+'0',D(100),
     PULSE+'0',D(100),
-    PULSE+'9'));
+    PULSE+'9'),
+    PULSE + 's',
+    PULSE + 's'
+    );
+    
   MapKey(&Throttle, APDIS, PULSE+USB[0x12]);
 }
 
