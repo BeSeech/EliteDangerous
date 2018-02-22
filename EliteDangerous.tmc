@@ -252,7 +252,7 @@ int ApplyInitButton()
 int MoveMouseCursorToCenter()
 {
     DXAxis(MOUSE_X_AXIS, 0000);
-    DXAxis(MOUSE_Y_AXIS, 1000);
+    DXAxis(MOUSE_Y_AXIS, -14900);
     ClickMouse();
 }
 
