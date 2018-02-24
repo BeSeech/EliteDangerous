@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GraphicsConfig>
+	<GUIColour>
+		<Default>
+			<LocalisationName>Standard</LocalisationName>
+			<MatrixRed> 0.15, 0.15, 0.91 </MatrixRed>
+			<MatrixGreen> 0.34, 0.97, 0.11 </MatrixGreen>
+			<MatrixBlue> 0.84, 0.87, 0.88 </MatrixBlue>
+		</Default>
+	</GUIColour>
+</GraphicsConfig>
