@@ -20,13 +20,15 @@ int toEngine;
 int toWeapon;
 int restoreEnergyTo;
 int REXECRepeatBoost;
+int REXECRepeatGetMaterial;
+int GetMaterialInProgress;
 
 //program startup
 int main()
 {
     Beep();
     if(Init(&EventHandle)) return 1; // declare the event handler, return on error
-    
+    GetMaterialInProgress = 0;
     isInit = 0;
     relogCount = 0;
 	SetREXECConstants();
@@ -54,6 +56,7 @@ int main()
 int SetREXECConstants()
 {
     REXECRepeatBoost = 1;
+    REXECRepeatGetMaterial = 2;
 }
 
 
@@ -273,7 +276,9 @@ int ApplyDX()
   MapKey(&Throttle, APALT, PULSE+ ESC);
 
 
-  MapKeyUMD(&Throttle, APDIS, CHAIN(PULSE+'h', D(), EXEC("MoveMouseCursorToCenter();")), PULSE + 'm', PULSE + 'm');  
+  MapKeyUMD(&Throttle, APDIS, CHAIN(PULSE+'h', D(), EXEC("MoveMouseCursorToCenter();")), 
+                              PULSE + 'm', 
+                              EXEC("GetMaterial();"));  
   
   MapKey(&Throttle, APALT, EXEC("printf(\"\\xa RelogCount = \"); printValue(relogCount); printf(\"\\xa\");"));
 }
@@ -568,7 +573,7 @@ int ApplyChangeShieldsCellBank()
     MapKeyUMD(&Throttle,  EFRNORM, 
         DOWN + DX1, 
         REXEC(REXECRepeatBoost, 2000, "ActKey(PULSE+KEYON+DX27);" , RNOSTOP),
-        DOWN + DX1); 
+        REXEC(REXECRepeatGetMaterial, 65000, "GetMaterial();" , RNOSTOP)); 
         
     MapKeyRUMD(&Throttle,  EFRNORM, 
         UP + DX1,
@@ -658,7 +663,7 @@ int ApplyRest()
     PULSE+'0',D(100),
     PULSE+'9'),
     PULSE + 's',
-    PULSE + 's'
+    EXEC("MoveBackward();")
     );
     
   MapKey(&Throttle, APDIS, PULSE+USB[0x12]);
@@ -749,6 +754,104 @@ int printValue(int value)
   }
 //  printf("\xa");
 }
+
+int MoveForward()
+{
+    int moveFByAxis = CHAIN( LOCK +
+        EXEC("ActKey(PULSE + KEYON + DXAxis(DX_Z_AXIS, -10000));"),
+        D(1000),
+        EXEC("ActKey(PULSE + KEYON + DXAxis(DX_Z_AXIS, 0));"),
+        LOCK
+        );    
+    ActKey(PULSE + KEYON + moveFByAxis);
+}
+
+int MoveBackward()
+{
+    int moveBByAxis = CHAIN(LOCK + 
+        EXEC("ActKey(PULSE + KEYON + DXAxis(DX_Z_AXIS, 11000));"),
+        D(1000),
+        EXEC("ActKey(PULSE + KEYON + DXAxis(DX_Z_AXIS, 0));"),
+        LOCK
+        );    
+    ActKey(PULSE + KEYON + moveBByAxis);
+}
+
+int Logout()
+{
+   int delTime = 400;  
+
+   int logoutChain = CHAIN(LOCK + 
+            PULSE + ESC, D(delTime * 10), //1
+            PULSE + DARROW, D(delTime), //2
+            PULSE + DARROW, D(delTime), //3
+            PULSE + DARROW, D(delTime), //4
+            PULSE + DARROW, D(delTime), //5
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 10), //7
+            PULSE + RARROW, D(delTime), //8
+            PULSE + ENT, D(delTime * 20), //9
+            LOCK
+    );
+    ActKey(PULSE + KEYON + logoutChain);
+}
+
+int LoginSoloMode()
+{
+    int delTime = 400;  
+
+    int loginSoloModeChain = CHAIN(LOCK + 
+            // Login          
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 5), //9
+            PULSE + DARROW, D(delTime), //6
+            PULSE + DARROW, D(delTime), //6
+            PULSE + ENT, D(delTime * 30), //9
+            LOCK
+    );
+    ActKey(PULSE + KEYON + loginSoloModeChain);
+}
+
+int GetMaterial()
+{  //start sequence from 24-25m from material
+    if (GetMaterialInProgress == 1) 
+    {
+        printf("GetMaterial() has been skipped;\xa");
+        return 0;
+    }
+    int getMaterialChain = CHAIN(LOCK + 
+        EXEC("GetMaterialInProgress = 1;"),
+        D(1000),
+        EXEC("ActKey(PULSE + KEYON + DX2);"),
+        D(1000),
+        EXEC("ActKey(PULSE + KEYON + 'p');"),
+        D(1000),
+        EXEC("MoveForward();"),
+        D(2000),
+        EXEC("MoveForward();"),
+        D(2000),
+        EXEC("MoveForward();"),
+        D(2000),
+        EXEC("MoveBackward();"),
+        D(2000),
+        EXEC("MoveBackward();"),
+        D(2000),
+        EXEC("MoveBackward();"),
+        D(2000),
+        EXEC("ActKey(PULSE + KEYON + 'p');"),
+        D(2000),
+        EXEC("Logout();"),
+        D(2000),
+        EXEC("LoginSoloMode();"),
+        D(2000),
+        EXEC("GetMaterialInProgress = 0;"),
+        D(1000),
+        LOCK
+        );    
+    ActKey(PULSE + KEYON + getMaterialChain);
+
+}
+
 
 int printDigit(int digit)
 {
